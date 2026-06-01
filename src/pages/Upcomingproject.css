@@ -1,0 +1,381 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.upcoming-hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(7, 20, 48, 0.38),
+    rgba(7, 20, 48, 0.10)
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-content {
+  max-width: 750px;
+  padding-top: 120px;
+}
+
+.hero-content span {
+  color: #c89b3c;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  color: #c89b3c;
+  font-size: 90px;
+  line-height: 1.05;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-family: serif;
+}
+
+.hero-content p {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.upcoming-section {
+  width: 100%;
+  padding: 90px 6%;
+  background: #f5f5f5;
+}
+
+.upcoming-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.upcoming-heading span {
+  color: #c89b3c;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.upcoming-heading h2 {
+  font-size: 46px;
+  color: #1b2230;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.project-card {
+  position: relative;
+  height: 620px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.45s ease;
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 0 0 rgba(200,155,60,0);
+}
+
+/* HOVER */
+.project-card:hover {
+  transform: translateY(-14px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.18),
+    0 0 30px rgba(200,155,60,0.25);
+}
+
+/* PREMIUM BORDER */
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    rgba(212,166,70,0.5),
+    rgba(255,255,255,0.12),
+    rgba(212,166,70,0.45)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 78%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.7s ease;
+}
+
+/* IMAGE ZOOM */
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+/* DARK OVERLAY */
+.project-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0.18),
+    rgba(0,0,0,0.03)
+  );
+  z-index: 1;
+}
+
+/* LIGHT SWEEP EFFECT */
+.project-image::after {
+  content: '';
+  position: absolute;
+  top: -120%;
+  left: -40%;
+  width: 60%;
+  height: 300%;
+  background: rgba(255,255,255,0.14);
+  transform: rotate(25deg);
+  transition: 0.9s;
+  z-index: 2;
+}
+
+.project-card:hover .project-image::after {
+  left: 130%;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.project-overlay {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  z-index: 3;
+}
+
+.project-overlay h3 {
+  color: #fff;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.project-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 24px 28px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.98),
+      rgba(248,248,248,0.98)
+    );
+
+  backdrop-filter: blur(12px);
+}
+
+/* LOCATION + STATUS */
+
+.project-location,
+.project-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-location {
+  margin-bottom: 12px;
+}
+
+.project-location span,
+.project-status span {
+  color: #d4a646;
+  font-size: 18px;
+}
+
+.project-location p,
+.project-status p {
+  color: #1b2230;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1200px) {
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    height: 560px;
+  }
+
+  .project-overlay h3 {
+    font-size: 34px;
+  }
+
+  .hero-content h1 {
+    font-size: 62px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .upcoming-hero {
+    height: 65vh;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    padding-top: 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .project-card {
+    height: 520px;
+  }
+
+  .project-overlay {
+    left: 20px;
+    bottom: 22px;
+  }
+
+  .project-overlay h3 {
+    font-size: 28px;
+  }
+
+  .project-content {
+    padding: 20px 22px;
+  }
+
+  .project-location p,
+  .project-status p {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .upcoming-hero {
+    height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content span {
+    font-size: 13px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .project-card {
+    height: 470px;
+    border-radius: 22px;
+  }
+
+  .project-overlay h3 {
+    font-size: 24px;
+  }
+
+  .project-location p,
+  .project-status p {
+    font-size: 15px;
+  }
+}
