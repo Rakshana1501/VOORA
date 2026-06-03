@@ -31,7 +31,7 @@ export default function About() {
       <div className="container about-grid">
         <div className="about-media" data-reveal="left">
           <img
-            src="https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/12/Untitled-design-8-1.jpg.bv.webp?bv_host=voora.co.in"
+            src="http://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/12/Untitled-design-8-1.jpg.bv.webp?bv_host=voora.co.in"
             alt="Modern luxury home at dusk"
           />
           <div className="about-exp">

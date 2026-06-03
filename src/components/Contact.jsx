@@ -130,8 +130,8 @@ export default function Contact() {
     {/* PLAN */}
     <div className="form-row">
       <div className="form-group">
-        <select id="planDuration" required>
-          <option value="" disabled selected hidden>Select your preferred duration</option>
+        <select id="planDuration" defaultValue="" required>
+          <option value="" disabled hidden>Select your preferred duration</option>
           <option value="immediate">Immediate</option>
           <option value="1month">1 Month Plan - Quick Start</option>
           <option value="3months">3 Months Plan - Short Term Growth</option>
