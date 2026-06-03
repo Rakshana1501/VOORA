@@ -1,99 +1,414 @@
-import { useState } from 'react'
-import './CompletedProjects.css'
+import { useRef, useState } from "react";
+import "./CompletedProjects.css";
+
+import {
+  FaMapMarkerAlt,
+  FaBuilding,
+  FaRulerCombined,
+  FaHome,
+  FaBed,
+  FaCalendarAlt,
+  FaTag,
+  FaDownload,
+  FaArrowRight,
+  FaTimes,
+  FaUser,
+  FaPhone,
+  FaEnvelope,
+  FaCommentDots,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
+
+import vooraashwin from "../assets/image/vooraaswin.webp";
+import vooranarayana from "../assets/image/vooranarayana.webp";
+import vooraprakash from "../assets/image/vooraprakash.webp";
+import vooravilla96 from "../assets/image/vooravilla96.webp";
+import vooravidyasagar from "../assets/image/vooravidhya.webp";
+import voorasaraswathi from "../assets/image/voorasaraswathi.webp";
+import vooragithanjali from "../assets/image/vooragitanjali.webp";
+import vooravijayasree from "../assets/image/vooravijayasree.webp";
+import voorapritvi from "../assets/image/voorapritvi.webp";
+import vooraradhahomes from "../assets/image/vooraradhahomes.webp";
+import voorajktower from "../assets/image/voorajktower.webp";
+import voorasreela from "../assets/image/voorasreelaterraces.webp";
+
+
 
 const projects = [
-  { name: 'The Grand Manor', type: 'Residential', year: '2024',
-    img: 'https://voora.co.in/wp-content/uploads/2025/04/commercial.jpg' },
-  { name: 'Azure Palm Villa', type: 'Villas', year: '2023',
-    img: 'https://voora.co.in/wp-content/uploads/2025/05/Voora-bannar_16-01-24-02-2.png' },
-  { name: 'Nova Office Park', type: 'Commercial', year: '2024',
-    img: 'https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Untitled-design.png.bv_resized_mobile.png.bv.webp?bv_host=voora.co.in' },
-  { name: 'Lumière Interiors', type: 'Interior', year: '2023',
-    img: 'https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/one-ser.webp.bv_resized_mobile.webp.bv.webp?bv_host=voora.co.in' },
-  { name: 'Crest Residences', type: 'Residential', year: '2022',
-    img: 'https://voora.co.in/wp-content/uploads/2025/01/commercial_completed.webp' },
-  { name: 'Onyx Boutique Hotel', type: 'Commercial', year: '2024',
-    img: 'https://voora.co.in/wp-content/uploads/2025/04/commercial.jpg Premium Construction & Design' },
-  { name: 'Coastal Glass Villa', type: 'Villas', year: '2024',
-    img: 'https://voora.co.in/wp-content/uploads/2025/01/shreeram_voora.webp' },
-  { name: 'The Loft Studio', type: 'Interior', year: '2022',
-    img: 'https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/11/investment_models.webp.bv.webp?bv_host=voora.co.in' },
-]
+  {
+    name: "Voora Ashwin",
+    type: "Residential",
+    location: "T. Nagar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: vooraashwin,
+  },
+  {
+    name: "Voora TRM Court",
+    type: "Residential",
+    location: "Mylapore, Chennai",
+    Acres: "4.2 Acres",
+    Units: "320 Units",
+    BHK: "2 & 3 BHK Apartments",
+    Price: "₹1 CR Onwards",
+    completion: "Q1 2026",
+    img: vooraashwin,
+  },
+  {
+    name: "Voora Narayana",
+    type: "Residential",
+    location: "Purasaiwakkam, Chennai",
+    Acres: "5.8 Acres",
+    Units: "410 Units",
+    BHK: "3 & 4 BHK SEA=Facing Apartments",
+    Price: "₹2.3 crows Onwards",
+    completion: "Q3 2025",
+    img: vooranarayana,
+  },
+  {
+    name: "Voora Prakash",
+    type: "Residential",
+    location: "Vijayaraghava Road, T. Nagar, Chennai",
+    Acres: "3.9 Acres",
+    Units: "280 Units",
+    BHK: "2 & 3 BHK",
+    Price: "₹1500 Per Sq.ft",
+    completion: "Q2 2026",
+    img: vooraprakash,
+  },
+  {
+    name: "Voora Villa 96",
+    type: "Residential",
+    location: "ECR – Sholinganallur, Chennai",
+    Acres: "7.1 Acres",
+    Units: "600 Units",
+    BHK: "4BHK",
+    Price: "₹11 CR Onwards",
+    completion: "Q4 2025",
+    img: vooravilla96,
+  },
+  {
+    name: "Voora Vidyasagar Oswal Garden",
+    type: "Residential",
+    location: "Phase -I Korukkupet, Chennai",
+    Acres: "7.1 Acres",
+    Units: "600 Units",
+    BHK: "4BHK",
+    Price: "₹2.7 CR Onwards",
+    completion: "Q4 2025",
+    img: vooravidyasagar,
+  },
+  {
+    name: "Voora Saraswathi",
+    type: "Residential",
+    location: "Hindi Prachar Sabha Road, T. Nagar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: voorasaraswathi,
+  },
 
-const filters = ['All Projects', 'Residential', 'Commercial', 'Villas']
+  {
+    name: "Voora Gitanjali",
+    type: "Residential",
+    location: "T.Nagar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: vooragithanjali,
+  },
+
+  {
+    name: "Voora Vijayasree",
+    type: "Residential",
+    location: "Dr.B.N. Road, T. Nagar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: vooravijayasree,
+  },
+
+  {
+    name: "Voora Pritvi",
+    type: "Residential",
+    location: "ECR, Kottivakkam, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: voorapritvi,
+  },
+
+  {
+    name: "Voora Radha Homes",
+    type: "Residential",
+    location: "Harrington Road, Chetpet, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: vooraradhahomes,
+  },
+
+  {
+    name: "Voora J K Tower",
+    type: "Commercial",
+    location: "T.Nagar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: voorajktower,
+  },
+
+  {
+    name: "Voora Sreela Terrace",
+    type: "Commercial",
+    location: "Adyar, Chennai",
+    Acres: "6.5 Acres",
+    Units: "544 Units",
+    BHK: "2, 3 & 4 BHK Apartments",
+    Price: "₹7199 Per Sq.ft",
+    completion: "Q4 2025",
+    img: voorasreela,
+  },
+];
+
+const filters = ["All Projects", "Residential", "Commercial"];
 
 export default function CompletedProjects() {
-  const [filter, setFilter] = useState('All Projects')
+  const [filter, setFilter] = useState("All Projects");
+  const trackRef = useRef(null);
+
   const visible = projects.filter(
-    (p) => filter === 'All Projects' || p.type === filter,
-  )
+    (p) => filter === "All Projects" || p.type === filter
+  );
+
+  const scroll = (dir) => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const card = track.querySelector(".up-card");
+    const amount = card ? card.offsetWidth + 28 : 380;
+
+    track.scrollBy({
+      left: dir * amount,
+      behavior: "smooth",
+    });
+  };
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openBrochure = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+  };
 
   return (
-    <section className="section completed" id="portfolio">
+    <section className="section upcoming" id="projects">
       <div className="container">
-        <div className="cp-head" data-reveal>
+
+        <div className="up-head">
           <div>
-            <span className="eyebrow">Our Work</span>
+            <span className="eyebrow">Our Completed Projects</span>
             <h2 className="section-title">Completed Projects</h2>
           </div>
-          <a href="#contact" className="btn btn-outline">Explore All Projects →</a>
+
+          <a href="#contact" className="btn btn-outline">
+            View All Projects <FaArrowRight />
+          </a>
         </div>
 
-        <div className="filter-tabs cp-tabs" data-reveal>
-          {filters.map((f) => (
-            <button
-              key={f}
-              className={filter === f ? 'active' : ''}
-              onClick={() => setFilter(f)}
-            >
-              {f}
+        <div className="up-controls">
+
+          <div className="filter-tabs">
+            {filters.map((f) => (
+              <button
+                key={f}
+                className={filter === f ? "active" : ""}
+                onClick={() => setFilter(f)}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+
+          <div className="up-arrows">
+            <button onClick={() => scroll(-1)} aria-label="Previous">
+              <FaChevronLeft />
             </button>
+
+            <button onClick={() => scroll(1)} aria-label="Next">
+              <FaChevronRight />
+            </button>
+          </div>
+
+        </div>
+
+        <div className="up-track" ref={trackRef}>
+
+          {visible.map((p) => (
+            <article className="up-card" key={p.name}>
+
+              <div
+                className="up-img"
+                style={{ backgroundImage: `url(${p.img})` }}
+              >
+                <span className="up-type">
+                  <FaBuilding /> {p.type}
+                </span>
+
+                <span className="up-price-badge">
+                  <FaTag /> {p.Price}
+                </span>
+
+                <button className="up-go" aria-label="Open Project">
+                  <FiArrowUpRight />
+                </button>
+
+                <div className="up-img-bottom">
+                  <h3>{p.name}</h3>
+                  <p className="up-location">
+                    <FaMapMarkerAlt /> {p.location}
+                  </p>
+                </div>
+              </div>
+
+              <div className="up-body">
+
+                <div className="up-grid">
+
+                  <div className="grid-item">
+                    <span className="grid-icon"><FaBed /></span>
+                    <div className="grid-text">
+                      <span>Configuration</span>
+                      <strong>{p.BHK}</strong>
+                    </div>
+                  </div>
+
+                  <div className="grid-item">
+                    <span className="grid-icon"><FaHome /></span>
+                    <div className="grid-text">
+                      <span>Units</span>
+                      <strong>{p.Units}</strong>
+                    </div>
+                  </div>
+
+                  <div className="grid-item">
+                    <span className="grid-icon"><FaRulerCombined /></span>
+                    <div className="grid-text">
+                      <span>Land Area</span>
+                      <strong>{p.Acres}</strong>
+                    </div>
+                  </div>
+
+                  <div className="grid-item">
+                    <span className="grid-icon"><FaCalendarAlt /></span>
+                    <div className="grid-text">
+                      <span>Completion</span>
+                      <strong>{p.completion}</strong>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="up-actions">
+
+                  <a
+                    href={`/project/${p.name.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="know-more-btn"
+                  >
+                    Know More <FaArrowRight />
+                  </a>
+
+                  <button
+                    className="brochure-btn"
+                    onClick={() => openBrochure(p)}
+                  >
+                    <FaDownload /> Brochure
+                  </button>
+
+                </div>
+
+              </div>
+
+            </article>
           ))}
+
         </div>
 
-        <div className="cp-grid">
-  {visible.map((p, i) => (
-    <article key={i} className="up-card">
+        {showModal && (
+          <div className="brochure-overlay" onClick={closeModal}>
 
-      <div
-        className="up-img"
-        style={{
-          backgroundImage: `url(${p.img})`
-        }}
-      >
-        <span className="up-status">
-          Completed
-        </span>
+            <div
+              className="brochure-modal"
+              onClick={(e) => e.stopPropagation()}
+            >
 
-        <button
-          className="up-go"
-          aria-label="Open project"
-        >
-          ↗
-        </button>
-      </div>
+              <button className="close-modal" onClick={closeModal} aria-label="Close">
+                <FaTimes />
+              </button>
 
-      <div className="up-body">
+              <div className="modal-header">
+                <span className="modal-tag">Premium Brochure</span>
+                <h3>{selectedProject?.name}</h3>
+                <p>Fill the details to download the brochure</p>
+              </div>
 
-        <span className="up-type">
-          {p.type}
-        </span>
+              <form className="brochure-form">
 
-        <h3>{p.name}</h3>
+                <div className="input-wrap">
+                  <FaUser />
+                  <input type="text" placeholder="Full Name" required />
+                </div>
 
-        <p>📍 Chennai</p>
+                <div className="input-wrap">
+                  <FaPhone />
+                  <input type="tel" placeholder="Phone Number" required />
+                </div>
 
-        <div className="up-meta">
-          <span>Completed</span>
-          <strong>{p.year}</strong>
-        </div>
+                <div className="input-wrap">
+                  <FaEnvelope />
+                  <input type="email" placeholder="Email Address" required />
+                </div>
 
-      </div>
+                <div className="input-wrap input-wrap--textarea">
+                  <FaCommentDots />
+                  <textarea rows="3" placeholder="Message (Optional)" />
+                </div>
 
-    </article>
-  ))}
-</div>
+                <button type="submit" className="download-btn">
+                  <FaDownload /> Download Brochure
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+        )}
+
       </div>
     </section>
-  )
+  );
 }

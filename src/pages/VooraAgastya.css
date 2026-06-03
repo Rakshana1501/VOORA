@@ -770,24 +770,6 @@
 
 /* THUMBNAILS */
 
-.gallery-thumbnails{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.thumbnail{
-  width:120px;
-  height:80px;
-  object-fit:cover;
-  border-radius:12px;
-  cursor:pointer;
-  opacity:.6;
-  transition:.3s;
-  border:3px solid transparent;
-}
 
 .thumbnail:hover{
   opacity:1;
@@ -2382,5 +2364,121 @@
 
   .amenities-divider span{
     width:80px;
+  }
+}
+.dual-image {
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.sub-img {
+  position: absolute;
+  width: 220px;
+  right: -30px;
+  bottom: -30px;
+  border-radius: 16px;
+  border: 6px solid #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* THUMBNAILS */
+.gallery-thumbnails {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 0;
+  margin-top: 30px;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+}
+
+.gallery-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  min-width: max-content;
+  padding: 0 20px;
+}
+.thumbnail {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+.download-brochure-box {
+  max-width: 420px;
+}
+
+.download-brochure-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-brochure-field {
+  width: 100%;
+  position: relative;
+}
+
+.download-brochure-field input,
+.download-brochure-field textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #dbe3ea;
+  border-radius: 12px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.download-brochure-field input::placeholder,
+.download-brochure-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.download-brochure-field input:focus,
+.download-brochure-field textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+}
+
+.download-brochure-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .download-brochure-field input,
+  .download-brochure-field textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .download-brochure-field textarea {
+    min-height: 100px;
   }
 }

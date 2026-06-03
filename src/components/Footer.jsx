@@ -61,9 +61,9 @@ export default function Footer() {
             <li><a href="/">Blogs</a></li>
             <li><a href="/">Careers</a></li>
             <li><a href="/">Awards</a></li>
-            <li><a href="/">News & Media</a></li>
+            {/* <li><a href="/">News & Media</a></li>
             <li><a href="/">Disclaimer</a></li>
-            <li><a href="/">Privacy Policy</a></li>
+            <li><a href="/">Privacy Policy</a></li> */}
           </ul>
         </div>
 
@@ -128,9 +128,9 @@ export default function Footer() {
             <li><a href="/">Voora Vijayasree</a></li>
             <li><a href="/">Voora Pritvi</a></li>
             <li><a href="/">Voora Radha Homes</a></li>
-            <li><a href="/">Voora J.K. Tower</a></li>
+            {/* <li><a href="/">Voora J.K. Tower</a></li>
             <li><a href="/">Voora Sreela Terrace</a></li>
-            <li><a href="/">Voora Ashwin</a></li>
+            <li><a href="/">Voora Ashwin</a></li> */}
           </ul>
         </div>
 

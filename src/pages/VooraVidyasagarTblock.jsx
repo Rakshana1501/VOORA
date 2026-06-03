@@ -30,6 +30,12 @@ import news18 from "../assets/image/news18.webp"
 import news19 from "../assets/image/news19.webp"
 import news20 from "../assets/image/news20.webp"
 import news21 from "../assets/image/news21.webp"
+import InteriorImg1 from "../assets/image/Interior-img1.jpg";
+import InteriorImg2 from "../assets/image/Interior-img2.jpg";
+import InteriorImg3 from "../assets/image/Interior-img3.jpg";
+import ExteriorImg1 from "../assets/image/Exterior-img1.jpg";
+import ExteriorImg2 from "../assets/image/Exterior-img2.jpg";
+import ExteriorImg3 from "../assets/image/Exterior-img3.png";
 
 
 const videos = [
@@ -316,17 +322,16 @@ const faqs = [
 
 const galleryData = {
   Interior: [
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2025/03/ch13-1024x680.webp.bv.webp?bv_host=voora.co.in",
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Voora.00_02_32_30.Still005-1-1024x576.jpg.bv.webp?bv_host=voora.co.in",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+     InteriorImg1,
+     InteriorImg2,
+     InteriorImg3, 
   ],
 
   Exterior: [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+    ExteriorImg1,
+    ExteriorImg2,
+    ExteriorImg3,
   ],
-
   "Site Progress": [
     "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/2.jpg.bv.webp?bv_host=voora.co.in",
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
@@ -990,67 +995,7 @@ const prevSpecSlide = () => {
 </section>
 
 
-    <section id="plans" className="plans-section">
-
-  {/* project final */}
-  <div className="plans-header">
-    <h2>Final Project</h2>
-    <p>
-      Explore thoughtfully designed layouts that maximize space,
-      ventilation, and luxury living comfort.
-    </p>
-  </div>
-
-  {/* ARROWS */}
-  <div className="plans-nav">
-    <button
-      className="nav-btn"
-      onClick={() => scroll("left")}
-    >
-      ❮
-    </button>
-
-    <button
-      className="nav-btn"
-      onClick={() => scroll("right")}
-    >
-      ❯
-    </button>
-  </div>
-
-  {/* CAROUSEL */}
-  <div className="plans-container" ref={containerRef}>
-
-    <div className="plan-card">
-      <img
-        src={plan1}
-        alt="2 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan2}
-        alt="3 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan3}
-        alt="Penthouse Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan4}
-        alt="Plan 4"
-      />
-    </div>
-
-  </div>
-</section>
+ 
 
 <section className="spec-section">
 

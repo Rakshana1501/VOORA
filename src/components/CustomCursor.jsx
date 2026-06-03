@@ -1,93 +1,118 @@
-// src/components/CustomCursor.jsx
 import { useEffect } from "react";
+import "./CustomCursor.css";
 
 /**
- * Premium Custom Cursor
- *
- * Features:
- * • Replaces the native pointer with fav.png (desktop only)
- * • Smooth lerp‑eased movement (≈60 fps)
- * • Hover: 1.3× scale + subtle purple glow
- * • Click: brief 0.9× shrink → bounce back
- * • Auto‑disable on touch devices
+ * Premium dual-element cursor
+ *   • A small filled dot that snaps to the mouse
+ *   • A larger ring that trails with smooth easing
+ *   • Contextual states: hover / view / play / click
+ *   • Auto-disables on touch devices
  */
 export default function CustomCursor() {
   useEffect(() => {
-    // -----------------------------------------------------------------
-    // 1️⃣ Create the floating cursor element
-    // -----------------------------------------------------------------
-    const cursor = document.createElement("div");
-    cursor.className = "custom-cursor";
-    document.body.appendChild(cursor);
+    const isTouch =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    if (isTouch) return;
 
-    // -----------------------------------------------------------------
-    // 2️⃣ Detect if we are on a touch device – if so, hide everything
-    // -----------------------------------------------------------------
-    const isTouch = ("ontouchstart" in window) || navigator.maxTouchPoints > 0;
-    if (isTouch) {
-      cursor.style.display = "none";
-      document.body.style.cursor = "auto";
-      return; // early exit – no listeners needed on touch devices
-    }
+    const dot = document.createElement("div");
+    dot.className = "cc-dot";
+    const ring = document.createElement("div");
+    ring.className = "cc-ring";
+    ring.innerHTML = `
+      <span class="cc-ring__label cc-ring__label--view">VIEW</span>
+      <span class="cc-ring__label cc-ring__label--play">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        PLAY
+      </span>
+      <span class="cc-ring__label cc-ring__label--open">OPEN</span>
+    `;
+    document.body.appendChild(dot);
+    document.body.appendChild(ring);
+    document.body.classList.add("cc-active");
 
-    // -----------------------------------------------------------------
-    // 3️⃣ Mouse tracking state
-    // -----------------------------------------------------------------
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let posX = mouseX;
-    let posY = mouseY;
-    const ease = 0.12; // tweak for snappier / smoother feel
+    let ringX = mouseX;
+    let ringY = mouseY;
+    const ease = 0.18;
 
-    // -----------------------------------------------------------------
-    // 4️⃣ Event listeners
-    // -----------------------------------------------------------------
-    const onMouseMove = (e) => {
+    const onMove = (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
+      dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
     };
-    const onMouseEnterHover = () => cursor.classList.add("hovered");
-    const onMouseLeaveHover = () => cursor.classList.remove("hovered");
-    const onMouseDown = () => cursor.classList.add("clicked");
-    const onMouseUp = () => cursor.classList.remove("clicked");
 
-    window.addEventListener("mousemove", onMouseMove);
-    // Hover targets – add/remove .hovered class
-    const hoverSelector = "a, button, .card, img, [data-cursor-hover]";
-    document.querySelectorAll(hoverSelector).forEach((el) => {
-      el.addEventListener("mouseenter", onMouseEnterHover);
-      el.addEventListener("mouseleave", onMouseLeaveHover);
-    });
-    // Click feedback
-    window.addEventListener("mousedown", onMouseDown);
-    window.addEventListener("mouseup", onMouseUp);
+    const onDown = () => ring.classList.add("is-clicked");
+    const onUp = () => ring.classList.remove("is-clicked");
 
-    // -----------------------------------------------------------------
-    // 5️⃣ Animation loop (requestAnimationFrame)
-    // -----------------------------------------------------------------
+    const setState = (name) => {
+      ring.classList.remove("is-hover", "is-view", "is-play", "is-open");
+      if (name) ring.classList.add(name);
+    };
+
+    const onOver = (e) => {
+      const t = e.target;
+      if (!(t instanceof Element)) return;
+
+      // News & Media section gets its own fav.png cursor
+      if (t.closest(".vn-section")) {
+        document.body.classList.add("cc-news");
+      } else {
+        document.body.classList.remove("cc-news");
+      }
+
+      if (t.closest("[data-cursor='play'], .cs-card--active, .cs-play, .video-card")) {
+        setState("is-play");
+      } else if (t.closest("[data-cursor='view'], img, .up-img, .cp-img, picture")) {
+        setState("is-view");
+      } else if (t.closest("[data-cursor='open'], .know-more-btn, .cp-view-btn, .download-btn")) {
+        setState("is-open");
+      } else if (t.closest("a, button, [data-cursor-hover], .card")) {
+        setState("is-hover");
+      } else {
+        setState(null);
+      }
+    };
+
+    const onLeaveWindow = () => {
+      dot.style.opacity = "0";
+      ring.style.opacity = "0";
+    };
+    const onEnterWindow = () => {
+      dot.style.opacity = "";
+      ring.style.opacity = "";
+    };
+
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mousedown", onDown);
+    window.addEventListener("mouseup", onUp);
+    window.addEventListener("mouseover", onOver);
+    document.addEventListener("mouseleave", onLeaveWindow);
+    document.addEventListener("mouseenter", onEnterWindow);
+
+    let raf;
     const animate = () => {
-      posX += (mouseX - posX) * ease;
-      posY += (mouseY - posY) * ease;
-      cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
-      requestAnimationFrame(animate);
+      ringX += (mouseX - ringX) * ease;
+      ringY += (mouseY - ringY) * ease;
+      ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+      raf = requestAnimationFrame(animate);
     };
     animate();
 
-    // -----------------------------------------------------------------
-    // 6️⃣ Cleanup on component unmount
-    // -----------------------------------------------------------------
     return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mousedown", onMouseDown);
-      window.removeEventListener("mouseup", onMouseUp);
-      document.querySelectorAll(hoverSelector).forEach((el) => {
-        el.removeEventListener("mouseenter", onMouseEnterHover);
-        el.removeEventListener("mouseleave", onMouseLeaveHover);
-      });
-      cursor.remove();
+      cancelAnimationFrame(raf);
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mousedown", onDown);
+      window.removeEventListener("mouseup", onUp);
+      window.removeEventListener("mouseover", onOver);
+      document.removeEventListener("mouseleave", onLeaveWindow);
+      document.removeEventListener("mouseenter", onEnterWindow);
+      document.body.classList.remove("cc-active");
+      document.body.classList.remove("cc-news");
+      dot.remove();
+      ring.remove();
     };
   }, []);
 
-  // This component renders nothing – it only injects the cursor div.
   return null;
 }

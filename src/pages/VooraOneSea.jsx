@@ -31,6 +31,42 @@ import news19 from "../assets/image/news19.webp"
 import news20 from "../assets/image/news20.webp"
 import news21 from "../assets/image/news21.webp"
 import overviewonesea from "../assets/image/overviewonesea.webp"
+import InteriorImg1 from "../assets/image/Interior-img1.jpg";
+import InteriorImg2 from "../assets/image/Interior-img2.jpg";
+import InteriorImg3 from "../assets/image/Interior-img3.jpg";
+import ExteriorImg1 from "../assets/image/Exterior-img-1.jpg";
+import ExteriorImg2 from "../assets/image/Exterior-img-2.jpg";
+import ExteriorImg3 from "../assets/image/Exterior-img-3.jpg";
+import ExteriorImg4 from "../assets/image/Exterior-img-4.jpg";
+import ExteriorImg5 from "../assets/image/Exterior-img-5.jpg";
+import ExteriorImg6 from "../assets/image/Exterior-img-6.jpg";  
+import ExteriorImg7 from "../assets/image/Exterior-img-7.jpg";
+
+import aminities1 from "../assets/image/Aminities-1.jpg"
+import aminities2 from "../assets/image/Aminities-2.jpg"
+import aminities3 from "../assets/image/Aminities-3.jpg"
+import aminities4 from "../assets/image/Aminities-4.jpeg"
+import aminities5 from "../assets/image/Aminities-5.jpeg"
+import aminities6 from "../assets/image/Aminities-6.jpg"
+import aminities7 from "../assets/image/Aminities-7.jpg"
+import aminities8 from "../assets/image/Aminities-8.jpg"
+import aminities9 from "../assets/image/Aminities-9.jpg"
+import aminities10 from "../assets/image/Aminities-10.jpg"
+import aminities11 from "../assets/image/Aminities-11.jpg"
+import aminities12 from "../assets/image/Aminities-12.jpg"
+import aminities13 from "../assets/image/Aminities-13.jpg"
+import aminities14 from "../assets/image/Aminities-14.jpg"
+import aminities15 from "../assets/image/Aminities-15.jpg"
+import aminities16 from "../assets/image/Aminities-16.jpg"
+import aminities17 from "../assets/image/Aminities-17.jpg"
+import aminities18 from "../assets/image/Aminities-18.jpg"
+import aminities19 from "../assets/image/Aminities-19.jpg"
+import aminities20 from "../assets/image/Aminities-20.png"
+import aminities21 from "../assets/image/Aminities-21.jpg"
+import aminities22 from "../assets/image/Aminities-22.jpg"
+import aminities23 from "../assets/image/Aminities-23.png"
+import masterplan from "../assets/image/Master-Layout.jpeg"
+import locationimg from "../assets/image/location-Image.jpeg";
 
 
 const videos = [
@@ -39,12 +75,12 @@ const videos = [
     title: "Voora One Sea",
   },
   {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    src: "https://www.youtube.com/embed/iO4aofTnM4Q",
     title: "Commercial Construction",
   },
   {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Interior Design Showcase",
+ src: "https://www.youtube.com/embed/Id3OAOGsPIk"
+ ,    title: "Interior Design Showcase",
   },
   {
     src: "https://www.youtube.com/embed/byoTnV_YaTM",
@@ -217,23 +253,29 @@ export default function VooraOneSea() {
 
 
 
-  const containerRef = useRef(null);
-
+const containerRef = useRef(null);
+const masterContainerRef = useRef(null);
 const scroll = (direction) => {
   if (containerRef.current) {
-    const scrollAmount =
-      window.innerWidth < 768 ? 320 : 600;
+    const scrollAmount = window.innerWidth < 768 ? 320 : 600;
 
     containerRef.current.scrollBy({
-      left: direction === "left"
-        ? -scrollAmount
-        : scrollAmount,
+      left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   }
 };
 
+const scrollMasterPlans = (direction) => {
+  if (!masterContainerRef.current) return;
 
+  const scrollAmount = window.innerWidth < 768 ? 320 : 600;
+
+  masterContainerRef.current.scrollBy({
+    left: direction === "left" ? -scrollAmount : scrollAmount,
+    behavior: "smooth",
+  });
+};
 const faqs = [
   {
     question: "Where is the Project located?",
@@ -314,24 +356,54 @@ const faqs = [
   },
 ];
 
-
 const galleryData = {
   Interior: [
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2025/03/ch13-1024x680.webp.bv.webp?bv_host=voora.co.in",
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Voora.00_02_32_30.Still005-1-1024x576.jpg.bv.webp?bv_host=voora.co.in",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    InteriorImg1,
+    InteriorImg2,
+    InteriorImg3,
   ],
 
   Exterior: [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+    ExteriorImg1,
+    ExteriorImg2,
+    ExteriorImg3,
+    ExteriorImg4,
+    ExteriorImg5,
+    ExteriorImg6,
+    ExteriorImg7,
   ],
 
   "Site Progress": [
     "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/2.jpg.bv.webp?bv_host=voora.co.in",
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
     "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+  ],
+
+  Amenities: [   // ✅ FIXED (removed space)
+   aminities1,
+   aminities2,
+   aminities3,
+   aminities4,
+   aminities5,
+   aminities6,
+   aminities7,
+   aminities8,
+   aminities9,
+   aminities10,
+   aminities11,
+   aminities12,
+   aminities13,
+   aminities14,
+  aminities15,
+  aminities16,
+  aminities17,
+  aminities18,
+  aminities19,
+  aminities20,
+  aminities21,
+  aminities22,
+  aminities23,
+
   ],
 };
 
@@ -443,15 +515,47 @@ const [currentNews, setCurrentNews] = useState(0);
 
 const nextNewsSlide = () => {
   setCurrentNews((prev) =>
-    prev >= newsData.length - 2 ? 0 : prev + 1
+    prev >= newsData.length - 1 ? 0 : prev + 1
   );
 };
 
 const prevNewsSlide = () => {
   setCurrentNews((prev) =>
-    prev === 0 ? newsData.length - 2 : prev - 1
+    prev === 0 ? newsData.length - 1 : prev - 1
   );
 };
+
+const newsExcerpts = [
+  "Voora unveils ambitious seafront landmark on ECR redefining coastal living.",
+  "Voora Group expands premium portfolio with One Sea, next to Mayajaal.",
+  "Sales milestone: Voora One Sea crosses ₹500 Cr in early bookings.",
+  "Voora wins 'Developer of the Year' for innovation and sustainability.",
+  "Chennai's tallest seafront tower breaks ground at Voora One Sea.",
+  "Voora partners with global architects for an iconic skyline statement.",
+  "Industry leaders applaud Voora's transparent customer-first approach.",
+  "Voora's pre-launch event draws record turnout from across South India.",
+  "Smart-home tech and biophilic design highlight the One Sea blueprint.",
+  "Voora Group celebrates two decades of building landmark homes.",
+  "Investors place faith in Voora One Sea as ECR demand surges.",
+  "Voora One Sea earns IGBC pre-certification for green building practices.",
+  "Construction milestone unlocked: foundation work begins ahead of schedule.",
+  "Voora hosts media walkthrough showcasing sea-facing residences.",
+  "ECR property prices climb as Voora One Sea sets new benchmarks.",
+  "Voora announces curated wellness amenities for One Sea residents.",
+  "Industry roundtable: Voora outlines vision for future coastal projects.",
+  "Voora One Sea opens experience centre with immersive 3D walkthroughs.",
+  "Voora Group reaffirms commitment to on-time, on-quality delivery.",
+];
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const newsMeta = (i) => {
+  const day = ((i * 3) % 28) + 1;
+  const month = monthNames[(i + 4) % 12];
+  return { date: `${month} ${day}, 2025`, read: `${3 + (i % 4)} min read` };
+};
+const featured = newsData[currentNews];
+const sideOffset = (off) => newsData[(currentNews + off) % newsData.length];
+const featuredMeta = newsMeta(currentNews);
+const featuredExcerpt = newsExcerpts[currentNews % newsExcerpts.length];
 
 
 
@@ -737,6 +841,8 @@ const prevSpecSlide = () => {
                 "🏗️ Spread Across 4 Towers",
                 "🌊 Sea & Backwater Views",
                 "🏡 2 & 3 BHK Luxury Homes",
+               "🛡️ 25+ Safety Features",
+"🌿 85% Open Space"
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} className="feature">
                   <p>{item}</p>
@@ -928,7 +1034,7 @@ const prevSpecSlide = () => {
 
 
 
-    <section id="plans" className="plans-section">
+    <section id="plan" className="plans-section">
 
   {/* HEADER */}
   <div className="plans-header">
@@ -989,70 +1095,26 @@ const prevSpecSlide = () => {
 
   </div>
 </section>
+<section id="master-plan" className="master-plans-section">
 
-
-    <section id="plans" className="plans-section">
-
-  {/* project final */}
   <div className="plans-header">
-    <h2>Final Project</h2>
+    <h2>Master Plans</h2>
     <p>
-      Explore thoughtfully designed layouts that maximize space,
-      ventilation, and luxury living comfort.
+      Thoughtfully crafted layouts that optimize space,
+      enhance natural ventilation, and elevate the
+      experience of luxurious living.
     </p>
   </div>
-
-  {/* ARROWS */}
-  <div className="plans-nav">
-    <button
-      className="nav-btn"
-      onClick={() => scroll("left")}
-    >
-      ❮
-    </button>
-
-    <button
-      className="nav-btn"
-      onClick={() => scroll("right")}
-    >
-      ❯
-    </button>
+<div className="plans-container">
+  <div className="masterplan-card">
+    <img
+      src="/src/assets/image/Master-Layout.jpeg"
+      alt="Master Plan"
+    />
   </div>
+</div>
 
-  {/* CAROUSEL */}
-  <div className="plans-container" ref={containerRef}>
-
-    <div className="plan-card">
-      <img
-        src={plan1}
-        alt="2 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan2}
-        alt="3 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan3}
-        alt="Penthouse Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan4}
-        alt="Plan 4"
-      />
-    </div>
-
-  </div>
 </section>
-
 <section className="spec-section">
 
   {/* HEADER */}
@@ -1211,82 +1273,153 @@ const prevSpecSlide = () => {
 
   </div>
 
-  <div className="gallery-thumbnails">
+<div className="gallery-thumbnails">
+  <div className="gallery-track">
     {images.map((img, index) => (
-      <motion.div
+      <img
         key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: index * 0.1 }}
-      >
-        <img
-          src={img}
-          alt=""
-          className={`thumbnail ${
-            currentImage === index ? "active-thumb" : ""
-          }`}
-          onClick={() => setCurrentImage(index)}
-        />
-      </motion.div>
+        src={img}
+        alt={`Thumbnail ${index + 1}`}
+        className={`thumbnail ${
+          currentImage === index ? "active-thumb" : ""
+        }`}
+        onClick={() => setCurrentImage(index)}
+      />
     ))}
   </div>
+</div>
 
 </section>
 
 
 
-    <section className="news-section">
+    <section className="vn-section">
 
-      {/* TITLE */}
-      <div className="news-header">
-        <h2>
-          <span>News</span> & Media
-        </h2>
-      </div>
+      <div className="vn-shell">
 
-      {/* SLIDER */}
-      <div className="news-slider">
+        <div className="vn-head">
+          <span className="vn-badge">
+            <span className="vn-badge-dot" /> PRESS COVERAGE
+          </span>
+          <h2 className="vn-title">
+            News & <span className="vn-title-accent">Media</span> Spotlight
+          </h2>
+          <p className="vn-subtitle">
+            Voora One Sea featured across India's leading publications and
+            real-estate journals.
+          </p>
 
-        {/* LEFT BUTTON */}
-        <button
-          className="news-btn left"
-          onClick={prevNewsSlide}
-        >
-          &#10094;
-        </button>
+          <div className="vn-meta-bar">
+            <div className="vn-counter">
+              <strong>{String(currentNews + 1).padStart(2, '0')}</strong>
+              <span>/ {String(newsData.length).padStart(2, '0')}</span>
+            </div>
 
-        {/* CARDS */}
-        <div className="news-container">
+            <div className="vn-nav">
+              <button
+                className="vn-nav-btn"
+                onClick={prevNewsSlide}
+                aria-label="Previous article"
+              >
+                &#10094;
+              </button>
+              <button
+                className="vn-nav-btn"
+                onClick={nextNewsSlide}
+                aria-label="Next article"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
 
-          {newsData
-.slice(currentNews, currentNews + 2)
-            .map((item, index) => (
+        <div className="vn-grid">
 
-              <div className="news-card" key={index}>
+          {/* FEATURED CARD */}
+          <article className="vn-featured" key={currentNews}>
+            <div
+              className="vn-featured-img"
+              style={{ backgroundImage: `url(${featured.image})` }}
+            >
+              <span className="vn-tag vn-tag--featured">
+                ★ FEATURED
+              </span>
+              <span className="vn-index">
+                {String(currentNews + 1).padStart(2, '0')}
+              </span>
+            </div>
 
-                <div className="news-image-wrapper">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                  />
-                </div>
-
-                <div className="news-title">
-                  <h3>{item.title}</h3>
-                </div>
-
+            <div className="vn-featured-body">
+              <div className="vn-pub">
+                <span className="vn-pub-dot" />
+                {featured.title}
               </div>
-            ))}
+
+              <h3 className="vn-featured-title">
+                {featuredExcerpt}
+              </h3>
+
+              <div className="vn-featured-meta">
+                <span>📅 {featuredMeta.date}</span>
+                <span className="vn-dot-sep">•</span>
+                <span>⏱ {featuredMeta.read}</span>
+              </div>
+
+              <button className="vn-read-btn" data-cursor="open">
+                Read Full Article
+                <span className="vn-read-arrow">→</span>
+              </button>
+            </div>
+          </article>
+
+          {/* SIDE STACK — next 3 articles */}
+          <div className="vn-stack">
+            {[1, 2, 3].map((off) => {
+              const item = sideOffset(off);
+              const idx = (currentNews + off) % newsData.length;
+              const meta = newsMeta(idx);
+              const excerpt = newsExcerpts[idx % newsExcerpts.length];
+              return (
+                <button
+                  key={`${idx}-${off}`}
+                  className="vn-side"
+                  onClick={() => setCurrentNews(idx)}
+                  data-cursor-hover
+                >
+                  <div
+                    className="vn-side-img"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  >
+                    <span className="vn-side-index">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  <div className="vn-side-body">
+                    <span className="vn-side-pub">{item.title}</span>
+                    <p className="vn-side-title">{excerpt}</p>
+                    <span className="vn-side-date">
+                      {meta.date} <span className="vn-side-arrow">→</span>
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
 
         </div>
 
-        {/* RIGHT BUTTON */}
-        <button
-          className="news-btn right"
-          onClick={nextNewsSlide}
-        >
-          &#10095;
-        </button>
+        {/* PRESS WALL — marquee of all publications */}
+        <div className="vn-wall">
+          <div className="vn-wall-track">
+            {[...newsData, ...newsData].map((item, idx) => (
+              <span key={idx} className="vn-wall-item">
+                <span className="vn-wall-bullet" />
+                {item.title}
+              </span>
+            ))}
+          </div>
+        </div>
 
       </div>
 
@@ -1298,7 +1431,7 @@ const prevSpecSlide = () => {
   <div className="faq-left">
    <iframe
   className="faq-iframe"
-  src="https://www.google.com/maps/embed?pb=..."
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.985076032592!2d80.23987629999999!3d12.8442403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ca81337ee277561%3A0x4eaa14e25bb3f28f!2sVoora%20-%20One%20Sea!5e0!3m2!1sen!2sin!4v1780396503454!5m2!1sen!2sin"
   style={{ border: 0 }}
   allowFullScreen=""
   loading="lazy"
@@ -1308,14 +1441,35 @@ const prevSpecSlide = () => {
   </div>
 
   <div className="faq-right">
+  <img src={locationimg} alt="Location" />
 
-    <div className="faq-header">
-      <h2>Frequently Asked Questions</h2>
+   
+
+  </div>
+
+</section>
+<section className="faq-wrap">
+
+  <div className="faq-head">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+
+  <div className="faq-body">
+
+    {/* LEFT SIDE */}
+    <div className="faq-col-left">
+      {faqs.slice(0, 3).map((faq, index) => (
+        <details className="faq-card" key={index}>
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
     </div>
 
-    <div className="faq-container">
-      {faqs.map((faq, index) => (
-        <details className="faq-item" key={index}>
+    {/* RIGHT SIDE */}
+    <div className="faq-col-right">
+      {faqs.slice(3, 6).map((faq, index) => (
+        <details className="faq-card" key={index + 3}>
           <summary>{faq.question}</summary>
           <p>{faq.answer}</p>
         </details>
@@ -1324,9 +1478,7 @@ const prevSpecSlide = () => {
 
   </div>
 
-</section>
-
-
+</section>  
 <section className="download-brochure-section">
 
   <div className="download-brochure-overlay"></div>

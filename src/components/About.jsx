@@ -57,21 +57,20 @@ export default function About() {
   </span>
 </p>
 
-          <div className="agastya-feature-grid">
-  {features.map((f, i) => (
-    <div
-      key={i}
-      className={`feature-card d${i + 1}`}
-      data-reveal
-    >
-      <span className="feature-icon">{f.icon}</span>
+<div className="features-mini">
+  <div className="features-mini-grid">
+    {features.map((item, index) => (
+      <div className="feature-mini-card" key={index}>
+        <div className="feature-mini-icon">
+          {item.icon}
+        </div>
 
-      <div>
-        <h4>{f.title}</h4>
-        <p>{f.text}</p>
+        <div className="feature-mini-content">
+          <h4>{item.title}</h4>
+        </div>
       </div>
-    </div>
-  ))}
+    ))}
+  </div>
 </div>
         </div>
       </div>

@@ -4,7 +4,6 @@ import useReveal from "./hooks/useReveal";
 
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
 import Services from "./components/Services";
@@ -30,6 +29,8 @@ import VooraBeckford from "./pages/VooraBeckford";
 import VooraHighwayHaven from "./pages/VooraHighwayHaven";
 import VooraTblock from "./pages/VooraVidyasagarTblock";
 import VooraOceans27 from "./pages/VooraOceans27";
+import Abouts from "./pages/About-us";
+import CommercialCompleted from "./pages/CommercialCompleted";
 
 function HomePage() {
   return (
@@ -40,7 +41,6 @@ function HomePage() {
       <section className="banner-section">
       <HeroCarousel />
       </section>
-      <Hero />
       <Marquee />
       <About />
       <Services />
@@ -74,6 +74,8 @@ function AppContent() {
         <Route path="/voora-vidyasagar-t-block" element={<VooraTblock />} />
         <Route path="/voora-oceans-27" element={<VooraOceans27 />} />
         <Route path="/completed" element={<Completed />} />
+        <Route path="/about-us" element={<Abouts />} />
+        <Route path="/commercial-completed" element={<CommercialCompleted />} />
       </Routes>
       <Footer />
       <ChatWidget />

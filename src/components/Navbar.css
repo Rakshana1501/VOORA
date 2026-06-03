@@ -101,6 +101,8 @@
 ==================================== */
 
 .nav-cta {
+  position: relative;
+  display: inline-block;
   padding: 12px 24px;
   border-radius: 50px;
   text-decoration: none;
@@ -114,11 +116,111 @@
   color: white;
   font-weight: 600;
 
-  transition: .3s;
+  isolation: isolate;
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 14px rgba(124, 58, 237, 0.30),
+    0 2px 4px rgba(124, 58, 237, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+
+  transform: translateY(0) translateZ(0);
+  transform-style: preserve-3d;
+
+  animation: navCtaMildPulse 3.6s ease-in-out infinite;
+
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1),
+    box-shadow .35s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Soft moving shine — the "mild lightning" sweep */
+.nav-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 65%
+  );
+  transform: translateX(-110%);
+  animation: navCtaSweep 4.8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gentle glow halo behind the button */
+.nav-cta::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #a78bfa, #c4b5fd, #7c3aed);
+  filter: blur(10px);
+  opacity: 0.35;
+  z-index: -1;
+  animation: navCtaGlow 3.6s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .nav-cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px) translateZ(0);
+  box-shadow:
+    0 14px 26px rgba(124, 58, 237, 0.40),
+    0 4px 8px rgba(124, 58, 237, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.nav-cta:hover::after {
+  opacity: 0.55;
+}
+
+.nav-cta:active {
+  transform: translateY(-1px) translateZ(0);
+  box-shadow:
+    0 4px 10px rgba(124, 58, 237, 0.30),
+    inset 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes navCtaMildPulse {
+  0%, 100% {
+    box-shadow:
+      0 6px 14px rgba(124, 58, 237, 0.30),
+      0 2px 4px rgba(124, 58, 237, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 8px 20px rgba(124, 58, 237, 0.42),
+      0 2px 4px rgba(124, 58, 237, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes navCtaGlow {
+  0%, 100% { opacity: 0.30; }
+  50%      { opacity: 0.55; }
+}
+
+@keyframes navCtaSweep {
+  0%   { transform: translateX(-110%); }
+  55%  { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-cta,
+  .nav-cta::before,
+  .nav-cta::after {
+    animation: none;
+  }
 }
 
 .nav-cta-mobile {

@@ -1,4 +1,4 @@
-import "./VooraOneSea.css";
+import "./VooraWestside.css";
 import { motion, AnimatePresence } from "framer-motion";
 import icon from "../assets/image/fav.png";
 import React, { useState, useEffect, useRef } from "react";
@@ -30,28 +30,26 @@ import news18 from "../assets/image/news18.webp"
 import news19 from "../assets/image/news19.webp"
 import news20 from "../assets/image/news20.webp"
 import news21 from "../assets/image/news21.webp"
-
+import InteriorImg1 from "../assets/image/Interior-img1.jpg";
+import InteriorImg2 from "../assets/image/Interior-img2.jpg";
+import InteriorImg3 from "../assets/image/Interior-img3.jpg";
+import ExteriorImg1 from "../assets/image/Exterior-img1.jpg";
+import ExteriorImg2 from "../assets/image/Exterior-img2.jpg";
+import ExteriorImg3 from "../assets/image/Exterior-img3.png";
+import floorplan1 from "../assets/image/floor-plan-1.webp";
+import floorplan2 from "../assets/image/floor-plan-2.webp";
+import floorplan3 from "../assets/image/floor-plan-3.webp";
+import floorplan4 from "../assets/image/floor-plan-4.webp";
+import floorplan5 from "../assets/image/floor-plan-5.webp";
 
 const videos = [
   {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Voora One Sea",
+    src: "https://www.youtube.com/embed/FI4_lw0Vq0w",
+    title: "Voora West side",
   },
   {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Commercial Construction",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Interior Design Showcase",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Villa Project Tour",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Project Walkthrough",
+    src: "https://www.youtube.com/embed/FI4_lw0Vq0w",
+    title: "Voora West side",
   },
 ];
 
@@ -84,66 +82,25 @@ const containerVariants = {
   },
 };
 const highlights = [
-  "Located on ECR at Kanathur",
-  "1-acre natural lake inside the community",
-  "Total Land Area 11.06 Acres",
-  "Grand Club spread across 60,000 sq. ft",
-  "Tallest tower in ECR with 41 floors",
-  "100% eco-sensitive with 1,000+ trees",
-  "Spread Across 4 Towers",
-  "French-inspired design with 100+ exotic plants",
-  "2 & 3 BHK - (1112 sq.ft to 1584 sq.ft)",
-  "Largest project in ECR with 1039 apartments in Phase 1",
-  "Fastest Handover Fit-out completion in just 2.5 years*",
-  "First project in Chennai offering both sea and backwater views",
-  "Unparalleled 40+ world-class amenities",
-  "85% Open Space",
-  "265+ quality checkpoints before handover",
-  "Exclusive sea-view café—the only one in ECR",
-  "25+ Safety Features",
-  "Sky Amphitheatre",
-  "20-year structure warranty—a first in India",
-  "2.7-acres podium space",
-  "10-year warranty on fittings and features",
-  "Grand Entrance Lobby",
-  "IGBC Pre-Certified Gold-Rated Green Homes",
-  "Fastest elevator with the speed of 2.5 secs per floor",
+  "Smart 2 and 3 BHK homes with advanced features like keyless entry for a secure and modern lifestyle",
+  "Ideally located in Ramapuram, close to Chennai’s top business districts and IT hubs for easy connectivity",
+"Contemporary layouts designed to maximise space and natural light for a refreshing living experience",
+"A serene environment that offers calm amidst the city’s pace",
+"110 premium residences thoughtfully designed for both style and function",
+"Smart-home amenities designed to provide seamless convenience and exceptional comfort"
 ];
 
 const amenities = [
-  { icon: "🚶", title: "Pedestrian Entry", desc: "Safe and elegant dedicated walking entrance" },
-  { icon: "🅿️", title: "Buggy Parking", desc: "Convenient parking space for electric buggies" },
-  { icon: "🧘", title: "Yoga Pavilion", desc: "Peaceful open-air yoga and meditation zone" },
-  { icon: "🌳", title: "Tree Court with Seating", desc: "Shaded green area with natural seating spaces" },
-  { icon: "🎋", title: "Bamboo Garden", desc: "Serene landscaped bamboo-themed garden" },
-  { icon: "🚶‍♂️", title: "Therapeutic Walkway", desc: "Relaxing pathway designed for health and wellness walks" },
-  { icon: "🏊", title: "Swimming Pool", desc: "Luxury infinity-style swimming pool" },
-  { icon: "👶", title: "Kids Pool", desc: "Safe and fun shallow pool for children" },
-
-  { icon: "🏸", title: "Multipurpose Sports Court", desc: "Space for badminton, basketball, and more" },
-  { icon: "🏐", title: "Tether Ball Area", desc: "Fun outdoor recreational play zone" },
-  { icon: "🚴", title: "Cycling Track", desc: "Dedicated cycling path surrounded by greenery" },
-  { icon: "♟️", title: "Pavilion with Game Tables", desc: "Relaxed seating with indoor-outdoor board games" },
-  { icon: "🛝", title: "Children’s Play Area", desc: "Safe and vibrant play zone for kids" },
-  { icon: "🐕", title: "Dog Walk Area", desc: "Dedicated space for pets and walking trails" },
-  { icon: "💦", title: "Water Archway", desc: "Decorative water feature walkway entrance" },
-  { icon: "🌱", title: "Planting Island", desc: "Green island zones for eco-friendly landscaping" },
-
-  { icon: "🧘‍♀️", title: "Meditation Pavilion", desc: "Quiet space for mindfulness and relaxation" },
-  { icon: "🌉", title: "Floating Deck", desc: "Water-facing deck for leisure and gatherings" },
-  { icon: "🐟", title: "Bio Pond", desc: "Eco-friendly natural pond ecosystem" },
-  { icon: "🌺", title: "Aroma Garden", desc: "Fragrant flower garden with calming atmosphere" },
-  { icon: "🗿", title: "Feature Sculpture", desc: "Artistic landmark installations across the landscape" },
-  { icon: "🏖️", title: "Lounge Pool", desc: "Relaxation pool with seating and leisure space" },
-  { icon: "⚽", title: "Mini Soccer Field", desc: "Compact turf ground for football practice" },
-  { icon: "🏏", title: "Cricket Practice Net", desc: "Dedicated training nets for cricket lovers" },
-
-  { icon: "🏃", title: "Jogging Track", desc: "Scenic track for daily fitness and running" },
-  { icon: "🏟️", title: "Sports Viewing Gallery", desc: "Seating area to enjoy live sports activities" },
-  { icon: "♟️", title: "Chess Board Area", desc: "Outdoor giant chess play zone" },
-  { icon: "⛱️", title: "Sand Play Area", desc: "Soft sand zone for kids recreation" },
-  { icon: "🌊", title: "Natural Pond (1 Acre)", desc: "Large eco pond enhancing natural beauty" },
-  { icon: "🏛️", title: "Block Entry Plaza", desc: "Grand entrance plaza with premium design" }
+  { icon: "🏊", title: "Swimming Pool", desc: "Luxury swimming pool for relaxation and recreation" },
+  { icon: "🛝", title: "Kids’ Play Area", desc: "Safe and engaging outdoor play zone for children" },
+  { icon: "🏛️", title: "Multipurpose Hall", desc: "Versatile space for gatherings and community events" },
+  { icon: "🏋️", title: "Gym", desc: "Well-equipped fitness center for an active lifestyle" },
+  { icon: "⚽", title: "Futsal Turf", desc: "Dedicated turf for futsal and recreational sports" },
+  { icon: "☀️", title: "Solar Energy", desc: "Sustainable solar-powered energy solutions" },
+  { icon: "⚡", title: "Generator Backup", desc: "Uninterrupted power supply during outages" },
+  { icon: "📹", title: "CCTV Camera", desc: "24/7 surveillance for enhanced security" },
+  { icon: "🔌", title: "EV Charging Provisions", desc: "Convenient charging facilities for electric vehicles" },
+  { icon: "♻️", title: "Sewage Treatment Plant", desc: "Eco-friendly wastewater treatment system" },
 ];
 
 
@@ -235,96 +192,79 @@ const scroll = (direction) => {
 
 const faqs = [
   {
-    question: "Where is the Project located?",
+    question: "What types of apartments in Ramapuram, Chennai are available at Voora Westside?",
     answer:
-    "The project is located in Kanathur, ECR (East Coast Road), Chennai, offering a prime location with stunning views and easy access to key areas."
+    "Voora Westside offers thoughtfully designed 2 BHK and 3 BHK apartments in Ramapuram, Chennai. Our project focuses on “zero dead space” design to ensure you get the most usable area in your new home."
   },
 
   {
-    question: "What types of apartments are available, and what are their size?",
+    question: "I'm looking for a new apartment in Ramapuram. Is your project ready to move in?",
     answer:
-      "The project offers spacious 2 & 3 BHK homes, with sizes ranging from 1100 sq. ft. to 1600 sq. ft., providing ample living space for families of different needs.",
+      "Voora Westside is a premier new apartment project in Ramapuram. It is currently under construction, with possession scheduled for January 2026, making it an excellent opportunity for early investment in a modern property.",
   },
 
   {
-    question: "What makes this project unique in Chennai?",
+    question: "Are there any 3 BHK flats for sale in Ramapuram with modern amenities?",
     answer:
-      "This is the first project in Chennai that offers both sea and backwater views, along with the tallest tower in ECR, standing at 41 floors. It is also the only project in the area that features a sea-view café, adding a luxurious touch to the living experience.",
+      "Yes, our 3 BHK flats for sale in Ramapuram are specifically designed for a luxury lifestyle. The Voora Westside project includes a swimming pool, gym, futsal turf, and EV charging stations, among other premium amenities.",
   },
 
   {
-    question: "What amenities are available?",
+    question: "What makes Ramapuram apartments a good choice for families and professionals?",
     answer:
-      "Residents can enjoy 40+ world-class amenities, including a grand 60,000 sq. ft. clubhouse, a one-acre natural pond within the community, and smart home integrations in all units to enhance convenience and modern living.",
+      "Ramapuram apartments offer a strategic advantage due to their close proximity to major IT hubs like DLF IT Park, top-tier schools like PSBB, and leading hospitals like MIOT International, making the daily commute convenient for everyone.",
   },
 
   {
-    question: "What warranties are provided?",
+    question: "How many units are available in Voora Westside?",
     answer:
-    "The project offers a 20-year structural warranty, which is a first-of-its-kind initiative in India, along with a 10-year warranty on fittings and features, ensuring long-term durability and quality assurance."
+    "The development consists of 110 exclusive 2 and 3 BHK apartments, fostering a vibrant and close-knit community."
   },
 
   {
-    question: "How environmentally friendly is the community?",
+    question: "Where can I find a premium flat for sale in Ramapuram, Chennai?",
     answer:
-    "The project is designed as a 100% environmentally sensitive community, featuring over 1000 trees, efficient water conservation methods, energy-saving initiatives, and proper waste management systems to promote sustainable living."
+    "You can find your ideal home at Voora Westside. Our project offers the perfect blend of a prime location and luxury living, making it a top choice for anyone looking for a flat for sale in Ramapuram, Chennai"
   },
 
   {
-    question: "What types of apartments and flats in ECR does Voora offer for sale?",
+    question: "Why should I choose a Voora apartment over other apartments for sale in Ramapuram?",
     answer:
-    "Voora’s new project offers a range of luxury apartments in ECR, including spacious 1, 2, and 3 BHK flats for sale. Each unit is designed for modern living in Chennai’s most scenic corridor."
+    "When you choose a Voora apartment in Ramapuram, you are investing with a developer with over 30 years of trust and experience. We offer unique features like no common walls for enhanced privacy and a 20-year structural warranty."
   },
 
   {
-    question: "Are these genuine sea-facing apartments in Chennai?",
+    question: "What are the size and specifications of the 3 BHK flats in Ramapuram by Voora?",
     answer:
-    "Absolutely. This is a premier sea-facing apartment project, featuring the tallest tower on the ECR. Most of our flats offer stunning, direct sea views or tranquil backwater views, providing a genuine coastal living experience."
+    "Our 3 BHK flats in Ramapuram range from 1,377 to 1,685 sq. ft. They come with vitrified tile flooring, a teak wood main door frame, and premium fittings, ensuring a high-quality living experience."
   },
 
   {
-    question: "Is this one of the new residential projects in ECR, Chennai?",
+    question: "Do Voora's Ramapuram apartments come with smart features?",
     answer:
-      "Yes, this is one of the most anticipated new projects in ECR. As an upcoming project, it features the latest in construction technology, smart home integration, and contemporary design, making it a prime investment.",
+      "Absolutely. Given Ramapuram’s rapid infrastructure growth and its status as a major employment hub, investing in a flat in Ramapuram, Chennai, especially in a new project like Voora Westside, holds strong potential for property value appreciation.",
   },
 
-  {
-    question: "Are there eco-friendly features in the project?",
-    answer:
-      "Yes, the project includes eco-friendly landscaping, natural ponds, green spaces, and IGBC Gold-rated sustainable development features.",
-  },
 
   {
-    question: "What makes these ECR luxury apartments stand out?",
+    question: "Is investing in a flat in Ramapuram, Chennai a good financial decision?",
     answer:
-      "Beyond the prime location, our ECR luxury apartments by Voora stand out due to their IGBC Gold-Rated eco-conscious design, premium interior finishes, a 20-year structural warranty, and an exclusive 40,000 sq. ft. clubhouse.",
-  },
-
-  {
-    question: "Why should I trust a Voora residential project in ECR?",
-    answer:
-      "With over 30 years of experience in Chennai’s real estate, Voora has a legacy of trust and quality. Choosing this residential project in ECR means you are investing with a reputable developer known for timely delivery and excellence in construction.",
-  },
-
-  {
-    question: "Where can I find beach view apartments in Chennai for sale with good amenities?",
-    answer:
-    "You’ve found them. Voora’s project on the ECR is the definitive answer for anyone searching for beach view apartments in Chennai for sale. We combine breathtaking views with a comprehensive list of lifestyle amenities unmatched in the area."
+      "Yes, all our Ramapuram apartments at the Westside project are smart-home ready. They feature highly secure keyless digital locks, providing modern convenience and enhanced security for your family.",
   },
 ];
 
 
 const galleryData = {
   Interior: [
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2025/03/ch13-1024x680.webp.bv.webp?bv_host=voora.co.in",
-    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Voora.00_02_32_30.Still005-1-1024x576.jpg.bv.webp?bv_host=voora.co.in",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+     InteriorImg1,
+     InteriorImg2,
+     InteriorImg3, 
   ],
 
   Exterior: [
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-    "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+    ExteriorImg1,
+    ExteriorImg2,
+    ExteriorImg3,
   ],
 
   "Site Progress": [
@@ -457,191 +397,102 @@ const prevNewsSlide = () => {
 
 const specifications = [
 
-  {
-    title: "PLUMBING FITTINGS",
-    points: [
-      "Sanitary fittings - Jaguar or equivalent.",
-"CP Fittings - Jaguar or equivalent.",
-"EWC - Floor mounted closet with cistern and health faucet.",
-"Wash basin - Granite countertop washbasins with bottle trap in all toilets.",
-"Shower spout - Hot and cold diverters for shower and spout.",
-"Single bowl SS sink will be provided in Utility only.",
-"Pneumatic pumping system will be provided for water lines.",
-"Water meter will be provided."
-    ],
-  },
-
-  {
-    title: "FIRE FIGHTING SERVICES",
-    points: [
-      "Fire sprinklers will be provided inside apartment, corridors and basement/ground floor car park.",
-      "Smoke detectors/heat detectors with fire alarms will be provided inside the apartment.",
-      "Fire hydrants and fire hose reels will be provided in all floor lobby and external yard.",
-      "Public address system will be provided.",
-      "PFire refuge areas will be provided in each towers.",
-    ],
-  },
-
+ 
   {
     title: "STRUCTURE",
     points: [
-      "RCC framed structure - Designed for earthquake resistance (Seismic Zone III) with pile foundation. Outer walls will be 165mm/200mm thick and inner partition walls will be 100mm thick RCC walls.",
-      "Floor Height (Including Slab) - Will be maintaned at 2950mm",
+      "R. C. C. frame structure designed for earthquake resistance - Seismic Zone 3",
+      "Outer walls with 8” thickness and inner partition walls with 4” thickness",
     ],
   },
 
   {
-    title: "ELECTRICAL SERVICES",
+    title: "COMMON AREA FLOORING",
     points: [
-      "Solar power - Provided for all common area lighting.",
-"Safety equipment - Lightining arresters will be provided in all towers.",
-"Transformers with RMU units for each tower.",
+      "Ground floor entrance and lift lobbies will be of imported tiles",
+"Typical floor lift lobbies will be of imported tiles",
+"Staircase will be of restile/equivalent flooring",
+"Corridors will be of vitrified/ceramic",
     ],
   },
 
 
   {
-    title: "FLOOR FINISH",
+    title: "PLUMBING AND SANITARY FITTINGS",
     points: [
-      "600x1200mm - Premium vitrified tile flooring in the living room, dining room and all bedrooms.",
-"300x300mm - Premium anti-skid tile flooring in toilets.",
-"600x600mm Anti-skid premium tiles flooring in utility and balcony.",
-"600x600mm - Premium vitrified tile flooring in corridor and lobby area.",
-"High quality granite for entrance lobby flooring.",
-"Full body vitrified tiles for Staircase and landings area.",
+      "All ceramic fittings will be of EWC and wash basins will be of white Hindware or equivalent",
+"Provision for hot water connection in individual heater of 15ltrs. capacity for each bathroom",
+"Hot and cold mixers for shower and tap in each bathroom will be of Hindware CP fittings or equivalent fittings",
+"Concealed plumbing lines from the overhead tank for each floor",
+"Single bowl stainless steel sink with drain board in the kitchen",
     ],
   },
 
   {
-    title: "DOORS",
+    title: "DOORFLOORING & WALL FINISHINGS",
     points: [
-      "Main doors - Polished wood frame and laminated flush-door shutter with highly secured digital locks.",
-"Bedroom doors - Polished wood frame and laminated flush-door shutter with anodised fittings.",
-"Toilet doors - Polished wood frame with waterproof flush door shutters with anodized fittings.",
+      "Flooring with quality 4’ X 2’ vitrified tiles for the foyer, living, bedrooms, kitchen and dining areas with 4” skirting",
+"Toilet tiles are a blend of imported digital tiles",
+"Toilet flooring will be of firm foot – grip tiles",
+"Wash area will be of ceramic tiles, provided up to the parapet wall height or will be in line with kitchen dado",
+"20mm. black granite slab will be provided for kitchen cooking platform with 8" ,
+"x12 ceramic dado (2' above counter)",
     ],
   },
 
     {
-    title: "WALL FINISH",
+    title: "DOORS",
     points: [
-"Toilets – 300x600mm premium ceramic tiles upto 7’6”.",
-"Kitchen - Kitchen wall tile and platform on client scope (we will provide electrical points and water lines).",
-"Utility - Ceramic tiles will be provided up to the parapet wall height.",
-"Lift wall in lobby – Full body vitrified tiles of size 600x600mm and jambs with granite finish.",
-"Lift wall in entrance lobby – High quality granite/marble.",
+"Main door frame will be of polished Teak wood frame with both sides laminated flush door shutter with Godrej highly secured digital locks",
+"Other doors will be of good quality wooden frames with both sides laminated flush door shutter",
+"All door fittings will be SS fittings",
     ],
   },
 
   {
-    title: "PAINT FINISHES",
+    title: "ELECTRICAL FITTINGS",
     points: [
-"Internal walls - Finished with 2 coats of putty, 1 coat of primer & 2 coats of premium emulsion paint.",
-"Exterior walls - Finished with 1 coat of primer and superior quality texture finish with color as per architect design.",
-"Ceiling finish - Finished with 2 coats of putty, 1 coat of primer and 2 coats of premium distemper.",
+"DG backup for 2 BHK – 750watts single phase complete lighting fan and 6A socket load with TV through ACCL",
+"DG backup for 3 BHK – 1000watts single phase complete lighting fan and 6A socket load with TV through ACCL",
     ],
   },
 
   {
-    title: "JOINERIES ",
+    title: "PLUMBING AND SANITARY FITTINGS ",
     points: [
-"Living, bedroom,kitchen - UPVC sliding windows having clear toughened glass, with sill granite.",
-"Toilets - UPVC ventilators with provision for exhaust fan and openable shutter for ODU access.",
+"Concealed copper wiring with Legrand/Crabtree or equivalent modular switches",
+"HT connection with internal metering for units",
+"Separate meter for lighting in common areas, lift and pumps",
+"3-phase will be provided for each flat",
+"15-amps power plug sockets will be provided for water heaters in the bathrooms and for air conditioners in the bedrooms",
+"One 5-amp socket will be provided for each room, except in the living room in addition to a multiple socket with 3 outlets will be provided for connection to TV etc",
+"2-way switches will be provided for fans and lights in all bedrooms",
+"Two 5-amp sockets and one 15-amp socket will be provided in the kitchen",
+"One bell point will be provided",
+"Fan points in living room, dining and bedrooms",
+"Light points, in living, dining, bedrooms, kitchen, washing area and balcony",
     ],
   },
 
   {
-    title: "SECURITY",
+    title: "WINDOWS AND VENTILATORS",
     points: [
-      "24x7 CCTV surveillance.",
-      "Video door phone.",
-      "Smart access control.",
-      "Security cabin at entrance.",
+      "MS Grills (painted) will be provided for all windows",
+"Windows and ventilators will be of UPVC casement fitted with 4mm. thick glass as per builder’s choice",
     ],
   },
 
   {
-    title: "LIFTS",
+    title: "PAINT",
     points: [
-      "High-speed automatic elevators.",
-      "Dedicated service lift.",
-      "Emergency alarm system.",
-      "Premium branded lifts.",
+     "Ceiling painting will be of OBD over putty",
+"Putty with acrylic emulsion for interior walls will be of Asian Paints or equivalent",
+"Enamel paints for MS Grills",
+"Exterior walls painted with weather-shield paint, Asian Paints or equivalent",
+"Melamine matte finishes paint for main door",
+"Enamel paint for other doors",
     ],
   },
-
-  {
-    title: "WATER SUPPLY",
-    points: [
-      "Underground sump provided.",
-      "Hydro pneumatic system.",
-      "Rainwater harvesting.",
-      "Water treatment plant.",
-    ],
-  },
-
-  {
-    title: "PARKING",
-    points: [
-      "Covered car parking.",
-      "EV charging provision.",
-      "Visitor parking area.",
-      "Wide driveway access.",
-    ],
-  },
-
-  {
-    title: "AMENITIES",
-    points: [
-      "Swimming pool.",
-      "Gymnasium.",
-      "Kids play area.",
-      "Clubhouse facilities.",
-    ],
-  },
-
-
-  {
-    title: "ELECTRICALS",
-    points: [
-      "Wires - Fire Retardant Low Smoke (FRLS) copper wire of a quality BIS, polycab or equivalent.",
-"Switches - Modular boxes and switches of Havells/Crabtree or equivalent.",
-"3-phase supply for all units with LT connnection.",
-"Safety device - MCB & RCCB (Residual Current Circuit Breaker).",
-"2-way switches for fan and light points in all bedrooms.",
-"5 amp - One socket will be provided in all main switch boards and two nos in kitchen.",
-"15 amp - Provided for washing machine and two nos. in kitchen.",
-"Foot lamp - Provided in all bedrooms.",
-"TV - Point provided in living and bedrooms with 3 nos. of 5-amp sockets.",
-"Data - Point provided in living and bedrooms.",
-"Air conditioner - 20-amp socket and control switch will be provided for living, dining and bedrooms.",
-"Exhaust fan - 5-amp socket will be provided in all toilets.",
-"Chimney - 5Amp socket will be provided in kitchen with exhaust hole.",
-"Geyser - 15-amp socket will be provided in all toilets.",
-"Aquaguard - 5Amp socket and water line will be provided above the kitchen sink.",
-"Power Backup - 1 BHK-500W, 2 BHK-750W, 3 BHK - 1000W through ACCL.",
-"Power backup for common area - 100% power backup for all common areas like STP,",
-"Water softener plant, lift and other services.",
-    ],
-  },
-
-  {
-    title: "COMMON FACILITIES",
-    points: [
-"Lifts - Adequate passenger lifts, stretcher lift/service lift will be provided for each tower.",
-"STP - Will be provided for treating 100% sewage effluent and treated water will be used for toilet flushing and gardening purpose.",
-"Water softener plant will be provided.",
-"Garbage chute - Automated garbage chutes will be provided for each tower.",
-"OWC - Organic Waste Convertor will be provided.",
-"Piped gas - The reticulated gas supply will be provided with metering system.",
-"Surveillance - 24/7 CCTV surveillance system will be installed in all common areas at ground floor only.",
-"EV charging station for car and bike will be provided.",
-"DTH - Provision for data and TV will be provided for each apartment.",
-"Rainwater Harvesting System will be provided.",
-"Landscape - Green belt will be provided through out the site.",
-    ],
-  },
-
-
 
   
   
@@ -721,21 +572,17 @@ const prevSpecSlide = () => {
             <motion.h4 variants={fadeUp}>OVERVIEW</motion.h4>
 
             <motion.h2 variants={fadeUp}>
-              Enjoy Your Sea Facing View <span>At ECR With Voora</span>
+              Smart Living in a Strategic Location 
             </motion.h2>
 
-            <motion.p variants={fadeUp}>
-              Voora ONE SEA is a premium luxury residential development located near
-              the coastline.
-            </motion.p>
+          
 
             {/* FEATURES */}
             <motion.div className="feature-grid" variants={containerVariants}>
               {[
-                "📍 Located on ECR at Kanathur",
-                "🏗️ Spread Across 4 Towers",
-                "🌊 Sea & Backwater Views",
-                "🏡 2 & 3 BHK Luxury Homes",
+                "📍 Smart 2 and 3 BHK homes with advanced features like keyless entry for a secure and modern lifestyle",
+                "🏗️ Ideally located in Ramapuram, close to Chennai’s top business districts and IT hubs for easy connectivity",
+             
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} className="feature">
                   <p>{item}</p>
@@ -750,7 +597,7 @@ const prevSpecSlide = () => {
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
 >
-  One Sea View →
+   Explore Project →
 </motion.button>
 
           </motion.div>
@@ -785,9 +632,9 @@ const prevSpecSlide = () => {
         </button>
 
         <div className="highlights-header">
-          <span>VOORA ONE SEA</span>
+          <span>VOORA WEST SIDE</span>
           <h2>Project Highlights</h2>
-          <p>Luxury Living With Unmatched Sea Views</p>
+      <p>Luxury Living With Unmatched West-Side Views</p>
         </div>
 <div className="highlights-grid">
   {highlights.map((item, index) => (
@@ -958,30 +805,37 @@ const prevSpecSlide = () => {
   {/* CAROUSEL */}
   <div className="plans-container" ref={containerRef}>
 
-    <div className="plan-card">
+    <div className="plan-card-img">
       <img
-        src={plan1}
+        src={floorplan1}
         alt="2 BHK Plan"
       />
     </div>
 
-    <div className="plan-card">
+    <div className="plan-card-img">
       <img
-        src={plan2}
+        src={floorplan2}
         alt="3 BHK Plan"
       />
     </div>
 
-    <div className="plan-card">
+    <div className="plan-card-img">
       <img
-        src={plan3}
+        src={floorplan3}
         alt="Penthouse Plan"
       />
     </div>
 
-    <div className="plan-card">
+    <div className="plan-card-img">
       <img
-        src={plan4}
+        src={floorplan4}
+        alt="Plan 4"
+      />
+    </div>
+    
+    <div className="plan-card-img">
+      <img
+        src={floorplan5}
         alt="Plan 4"
       />
     </div>
@@ -990,67 +844,7 @@ const prevSpecSlide = () => {
 </section>
 
 
-    <section id="plans" className="plans-section">
 
-  {/* project final */}
-  <div className="plans-header">
-    <h2>Final Project</h2>
-    <p>
-      Explore thoughtfully designed layouts that maximize space,
-      ventilation, and luxury living comfort.
-    </p>
-  </div>
-
-  {/* ARROWS */}
-  <div className="plans-nav">
-    <button
-      className="nav-btn"
-      onClick={() => scroll("left")}
-    >
-      ❮
-    </button>
-
-    <button
-      className="nav-btn"
-      onClick={() => scroll("right")}
-    >
-      ❯
-    </button>
-  </div>
-
-  {/* CAROUSEL */}
-  <div className="plans-container" ref={containerRef}>
-
-    <div className="plan-card">
-      <img
-        src={plan1}
-        alt="2 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan2}
-        alt="3 BHK Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan3}
-        alt="Penthouse Plan"
-      />
-    </div>
-
-    <div className="plan-card">
-      <img
-        src={plan4}
-        alt="Plan 4"
-      />
-    </div>
-
-  </div>
-</section>
 
 <section className="spec-section">
 
@@ -1325,7 +1119,6 @@ const prevSpecSlide = () => {
 
 </section>
 
-
 <section className="download-brochure-section">
 
   <div className="download-brochure-overlay"></div>
@@ -1344,9 +1137,47 @@ const prevSpecSlide = () => {
       Download floor plans, amenities, specifications and pricing details.
     </p>
 
-    <button className="download-brochure-btn">
-      Download Now
-    </button>
+    <form className="download-brochure-form">
+
+      <div className="download-brochure-field">
+        <input
+          type="text"
+          placeholder="Full Name"
+          required
+        />
+      </div>
+
+      <div className="download-brochure-field">
+        <input
+          type="tel"
+          placeholder="Phone Number"
+          required
+        />
+      </div>
+
+      <div className="download-brochure-field">
+        <input
+          type="email"
+          placeholder="Email Address"
+          required
+        />
+      </div>
+
+      <div className="download-brochure-field">
+        <textarea
+          rows="4"
+          placeholder="Message"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="download-brochure-btn"
+      >
+        Download Now
+      </button>
+
+    </form>
 
   </div>
 

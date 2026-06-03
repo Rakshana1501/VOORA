@@ -10,31 +10,40 @@
 .highlights-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 20px;
+  padding: 20px;
 }
 
+/* Premium glassmorphism card */
 .highlight-item {
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(30px);
+}
 
-  animation: fadeUp 0.6s ease forwards;
+.highlight-item:hover {
+  transform: translateY(0) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .highlight-item p {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  font-weight: 500;
+  color: #222;
 }
 
 .highlight-item img {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Animation */
@@ -91,7 +100,7 @@
 
 .one-sea-hero{
   width:100%;
-  height:85vh;
+  height:72vh;
   position:relative;
   background-repeat: no-repeat;
 }
@@ -445,18 +454,27 @@
   margin:20px 0;
 }
 
-.feature-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  margin-top:30px;
-}
+  .feature-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
 
-.feature{
-  background:#f5f5f5;
-  padding:16px;
-  border-radius:12px;
-}
+  .feature{
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  }
 
 .cta-btn{
   margin-top:30px;

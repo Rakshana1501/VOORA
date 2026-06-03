@@ -37,7 +37,7 @@ const [commercialSubOpen, setCommercialSubOpen] = useState(false);
           </li>
 
           <li>
-            <a href="#about">About</a>
+<a href="/about-us">About</a>
           </li>
 
           <li>
@@ -75,31 +75,31 @@ const [commercialSubOpen, setCommercialSubOpen] = useState(false);
     commercialSubOpen ? "show" : ""
   }`}
 >      <Link to="/voora-one-sea">
-        VOORA ONE SEA
+        Voora One Sea
       </Link>
 
       <Link to="/voora-agastya">
-        VOORA AGASTYA
+      Voora Agastya
       </Link>
 
       <Link to="/voora-westside">
-        VOORA WESTSIDE
+        Voora Westside
       </Link>
 
       <Link to="/voora-beckford">
-        VOORA BECKFORD
+        Voora Beckford
       </Link>
 
       <Link to="/voora-highway-haven">
-        VOORA HIGHWAY HAVEN
+        Voora Highway Haven
       </Link>
 
       <Link to="/voora-vidyasagar-t-block">
-        VOORA VIDYASAGAR OSWAL GARDEN T-BLOCK
+        Voora Vidyasagar Oswal Garden T_Block
       </Link>
 
       <Link to="/voora-oceans-27">
-        VOORA OCEAN'S 27
+        Voora Ocean's 27
       </Link>
     </div>
   </div>
@@ -156,7 +156,7 @@ const [commercialSubOpen, setCommercialSubOpen] = useState(false);
       </div>
     </div>
 
-    <Link to="/completed-projects">
+    <Link to="/commercial-completed">
   Completed Projects
 </Link>
 

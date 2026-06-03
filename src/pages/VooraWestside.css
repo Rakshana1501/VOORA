@@ -669,8 +669,8 @@
 }
 
 /* CARDS */
-.plan-card {
-  flex: 0 0 38%;
+.plan-card-img {
+  flex: 0 0 30% !important;
   height: 520px;
   border-radius: 20px;
   overflow: hidden;
@@ -678,14 +678,13 @@
   transition: transform 0.3s ease;
 }
 
-.plan-card:hover {
+.plan-card-img:hover {
   transform: scale(1.03);
 }
 
-.plan-card img {
+.plan-card-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 /* =========================================================
    GALLERY
@@ -2382,5 +2381,67 @@
 
   .amenities-divider span{
     width:80px;
+  }
+}
+.download-brochure-box {
+  max-width: 420px;
+}
+
+.download-brochure-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-brochure-field {
+  width: 100%;
+  position: relative;
+}
+
+.download-brochure-field input,
+.download-brochure-field textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #dbe3ea;
+  border-radius: 12px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.download-brochure-field input::placeholder,
+.download-brochure-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.download-brochure-field input:focus,
+.download-brochure-field textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.12);
+}
+
+.download-brochure-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .download-brochure-field input,
+  .download-brochure-field textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .download-brochure-field textarea {
+    min-height: 100px;
   }
 }

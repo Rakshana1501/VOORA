@@ -1,4 +1,11 @@
-.services { background: var(--grad-soft); }
+/* =========================
+   BASE (Desktop First)
+========================= */
+
+.services {
+  background: var(--grad-soft);
+}
+
 .services-head {
   display: flex;
   align-items: flex-end;
@@ -6,57 +13,66 @@
   gap: 24px;
   margin-bottom: 46px;
 }
-.services-head .thin { font-weight: 400; color: var(--ink-soft); }
-.br-only { display: none; }
+
+.services-head .thin {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.br-only {
+  display: none;
+}
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
+
+/* CARD */
 .service-card {
   padding: 30px 26px;
   border-radius: var(--radius-lg);
   background: #fff;
-  border: 2px solid #6d28d9; /* Purple Border */
+  border: 1px solid #FFD700;
   box-shadow: var(--shadow-sm);
   transition: transform 0.4s var(--ease), box-shadow 0.4s;
   position: relative;
   overflow: hidden;
 }
-.service-card::before {
-      border: 2px solid #6d28d9;
-  content: '';
-  position: absolute;
-  inset: auto -40% -60% auto;
-  width: 160px; height: 160px;
-  border-radius: 50%;
-  background: var(--purple-100);
-  opacity: 0;
-  transition: opacity 0.4s, transform 0.5s var(--ease);
-}
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-md);
 }
-.service-card:hover::before { opacity: 0.6; transform: scale(1.4); }
+
+/* ICON */
 .service-icon {
-  position: relative;
-  z-index: 1;
   display: grid;
   place-items: center;
-  width: 56px; height: 56px;
+  width: 56px;
+  height: 56px;
   border-radius: 16px;
   background: var(--grad-purple);
   font-size: 1.5rem;
   margin-bottom: 20px;
   box-shadow: 0 10px 22px rgba(109, 40, 217, 0.3);
 }
-.service-card h3 { position: relative; z-index: 1; font-size: 1.18rem; margin-bottom: 8px; }
-.service-card p { position: relative; z-index: 1; color: var(--muted); font-size: 0.88rem; margin-bottom: 18px; }
+
+/* TEXT */
+.service-card h3 {
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+}
+
+/* LINK */
 .service-link {
-  position: relative;
-  z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -64,11 +80,136 @@
   font-size: 0.86rem;
   color: var(--purple-600);
 }
-.service-link span { transition: transform 0.3s var(--ease); }
-.service-link:hover span { transform: translateX(5px); }
 
-@media (max-width: 980px) { .services-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 760px) {
-  .services-head { flex-direction: column; align-items: flex-start; }
+/* =========================
+   TABLET (<= 980px)
+========================= */
+
+@media (max-width: 980px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .service-card {
+    padding: 26px 22px;
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
 }
-@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* =========================
+   SMALL TABLET / MOBILE LANDSCAPE (<= 760px)
+========================= */
+
+@media (max-width: 760px) {
+  .services-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .services-head h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .btn.btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-card {
+    padding: 22px 18px;
+  }
+}
+
+/* =========================
+   MOBILE (<= 480px)
+========================= */
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .services-head h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+
+  .service-link {
+    font-size: 0.82rem;
+  }
+}
+
+/* =========================
+   EXTRA SMALL (<= 360px)
+========================= */
+
+@media (max-width: 360px) {
+  .services-head h2 {
+    font-size: 1.25rem;
+  }
+
+  .service-card {
+    padding: 18px 14px;
+  }
+}
+
+/* =========================
+   SCROLL REVEAL BASE STATE
+========================= */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  will-change: transform, opacity;
+}
+
+/* LEFT / RIGHT VARIANTS */
+[data-reveal="left"] {
+  transform: translateX(-60px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(60px);
+}
+
+/* ACTIVE STATE */
+[data-reveal].active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* CARD STAGGER FEEL */
+.service-card.active {
+  transform: translateY(0);
+}
+
+.service-card {
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.6s ease,
+    opacity 0.6s ease;
+}
