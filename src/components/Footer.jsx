@@ -72,7 +72,7 @@ export default function Footer() {
 
           <div className="footer-logo-box">
             <img
-            src="http://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/10/logo.png.bv.webp?bv_host=voora.co.in"              alt="Voora Logo"
+            src="https://placehold.co/200x80/1a1a1a/ffffff?text=VOORA+LOGO"              alt="Voora Logo"
               className="footer-logo"
             />
 

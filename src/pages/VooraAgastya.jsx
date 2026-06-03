@@ -259,7 +259,7 @@ const galleryData = {
   ],
 
   "Site Progress": [
-    "http://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/2.jpg.bv.webp?bv_host=voora.co.in",
+    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80",
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
     "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
   ],
@@ -525,7 +525,7 @@ const prevSpecSlide = () => {
     {/* IMAGE */}
     <motion.div className="overview-image" variants={imageVariant}>
       <img
-        src="http://voora.co.in/wp-content/uploads/2025/08/cozy-studio-apartment-with-bedroom-living-space-scaled.jpg"
+        src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80"
         alt="Premium Residence"
       />
     </motion.div>

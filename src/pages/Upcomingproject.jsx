@@ -180,7 +180,7 @@ export default function Upcomingprojects() {
   className="upcoming-hero"
   style={{
     backgroundImage:
-      "url('http://voora.co.in/wp-content/uploads/2025/05/Voora-bannar_16-01-24-02-2.png')",
+      "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')",
   }}
 >
   
