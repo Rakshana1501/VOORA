@@ -1,13 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-<<<<<<< HEAD
-=======
+
 import { useEffect } from "react";
-<<<<<<< HEAD
+
 import { initTracker, captureLead } from "./utils/tracker";
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
-=======
+
 import { initTracker, captureLead, getLeadTrackerParams } from "./utils/tracker";
->>>>>>> 5acf6610ce2c1df0d0fb71f7ba0b135cba2f6092
 
 import useReveal from "./hooks/useReveal";
 
@@ -65,8 +62,6 @@ function HomePage() {
 function AppContent() {
   useReveal();
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     initTracker();
 
@@ -160,7 +155,6 @@ function AppContent() {
     return () => document.removeEventListener('submit', handleGlobalSubmit);
   }, []);
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   return (
     <>
       <ScrollToTop />
