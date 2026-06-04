@@ -50,6 +50,7 @@
 ==================================== */
 
 .logo {
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -59,6 +60,13 @@
   height: 46px;
   width: auto;
   display: block;
+=======
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #fff;
+>>>>>>> VOORA-Rakshana
 }
 
 .logo-he {
@@ -653,6 +661,7 @@
   color: #111827;
 }
 
+<<<<<<< HEAD
 /* Plain button that looks like a nav link (for hash-scroll items) */
 .nav-plain-btn {
   border: none;
@@ -678,6 +687,8 @@
   }
 }
 
+=======
+>>>>>>> VOORA-Rakshana
 
 @media (min-width: 992px) {
 

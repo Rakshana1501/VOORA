@@ -677,6 +677,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
+<<<<<<< HEAD
 .plans-container {
   display: flex;
   justify-content: center;
@@ -692,6 +693,11 @@
   width: 100%;
   height: 600px;
   object-fit: contain;
+=======
+
+.plan-card:hover {
+  transform: scale(1.03);
+>>>>>>> VOORA-Rakshana
 }
 
 .plan-card img {
@@ -781,6 +787,7 @@
 }
 
 /* THUMBNAILS */
+<<<<<<< HEAD
 .gallery-thumbnails {
   width: 100%;
   overflow-x: auto;
@@ -834,6 +841,26 @@
 .active-thumb {
   opacity: 1;
   border-color: #d4af37;
+=======
+
+.gallery-thumbnails{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.thumbnail{
+  width:120px;
+  height:80px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor:pointer;
+  opacity:.6;
+  transition:.3s;
+  border:3px solid transparent;
+>>>>>>> VOORA-Rakshana
 }
 
 .thumbnail:hover{
@@ -2431,6 +2458,10 @@
     width:80px;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> VOORA-Rakshana
 /* =====================================================
    NEWS & MEDIA — Premium magazine-style redesign
    Prefix: .vn-*  (replaces legacy .news-* layout)
@@ -2892,6 +2923,7 @@
   .vn-side { grid-template-columns: 90px 1fr; padding: 10px; }
   .vn-read-btn { padding: 11px 18px; font-size: 0.78rem; }
 }
+<<<<<<< HEAD
 .new-section {
   padding: 50px 20px;
 }
@@ -2961,10 +2993,31 @@
    CENTER HEADER (old style kept)
 ========================= */
 .faq-head {
+=======
+
+/* ===========================
+   HIGHWAY FAQ
+=========================== */
+
+.highwayfaq-section {
+  padding: 90px 20px;
+  background: #faf7ff;
+}
+
+.highwayfaq-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+
+.highwayfaq-header {
+>>>>>>> VOORA-Rakshana
   text-align: center;
   margin-bottom: 50px;
 }
 
+<<<<<<< HEAD
 .faq-head h2 {
   font-size: 42px;
   font-weight: 700;
@@ -3037,5 +3090,134 @@
 @media (max-width: 768px) {
   .faq-body {
     flex-direction: column;
+=======
+.highwayfaq-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ede9fe;
+  color: #7c3aed;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.highwayfaq-title {
+  margin-top: 15px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.highwayfaq-subtitle {
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* FAQ List */
+
+.highwayfaq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.highwayfaq-item {
+  background: #fff;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.highwayfaq-item:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.12);
+}
+
+.highwayfaq-question {
+  cursor: pointer;
+  padding: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  list-style: none;
+  position: relative;
+}
+
+.highwayfaq-question::-webkit-details-marker {
+  display: none;
+}
+
+.highwayfaq-question::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #8b5cf6;
+  transition: 0.3s;
+}
+
+.highwayfaq-item[open] .highwayfaq-question::after {
+  content: "−";
+}
+
+.highwayfaq-answer {
+  padding: 0 24px 24px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .highwayfaq-title {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .highwayfaq-section {
+    padding: 60px 15px;
+  }
+
+  .highwayfaq-title {
+    font-size: 28px;
+  }
+
+  .highwayfaq-question {
+    font-size: 16px;
+    padding: 18px;
+    padding-right: 50px;
+  }
+
+  .highwayfaq-answer {
+    padding: 0 18px 18px;
+    font-size: 15px;
+  }
+
+  .highwayfaq-question::after {
+    right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highwayfaq-title {
+    font-size: 24px;
+  }
+
+  .highwayfaq-question {
+    font-size: 15px;
+  }
+
+  .highwayfaq-answer {
+    font-size: 14px;
+>>>>>>> VOORA-Rakshana
   }
 }

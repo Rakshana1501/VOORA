@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import { captureLead } from '../utils/tracker';
+=======
+>>>>>>> VOORA-Rakshana
 import './Contact.css';
 
 
@@ -72,6 +75,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     
     const formData = {
       name: e.target.querySelector('#name')?.value || '',
@@ -85,13 +89,19 @@ export default function Contact() {
 
     captureLead('Contact Form (Book Site Visit)', formData);
 
+=======
+>>>>>>> VOORA-Rakshana
     setSent(true);
     e.target.reset();
     setTimeout(() => setSent(false), 3000);
   };
 
   return (
+<<<<<<< HEAD
     <section className="hero" id="top">
+=======
+    <section className="hero" id="contact">
+>>>>>>> VOORA-Rakshana
 
       <div className="container hero-inner">
 
@@ -141,6 +151,7 @@ export default function Contact() {
       </div>
     </div>
 
+<<<<<<< HEAD
     {/* PROJECT INTEREST */}
     <div className="form-row">
       <div className="form-group">
@@ -154,6 +165,19 @@ export default function Contact() {
           <option value="voora-vidyasagar">Voora Vidyasagar T-Block</option>
           <option value="voora-oceans27">Voora Ocean's 27</option>
           <option value="voora-tech-edge">Voora Tech Edge</option>
+=======
+    {/* PLAN */}
+    <div className="form-row">
+      <div className="form-group">
+        <select id="planDuration" required>
+          <option value="" disabled selected hidden>Select your preferred duration</option>
+          <option value="immediate">Immediate</option>
+          <option value="1month">1 Month Plan - Quick Start</option>
+          <option value="3months">3 Months Plan - Short Term Growth</option>
+          <option value="6months">6 Months Plan - Structured Learning</option>
+          <option value="9months">9 Months Plan - Deep Mastery</option>
+          <option value="12months">12 Months Plan - Full Journey Program</option>
+>>>>>>> VOORA-Rakshana
         </select>
         <label></label>
       </div>

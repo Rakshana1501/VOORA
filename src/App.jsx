@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+<<<<<<< HEAD
 import { useEffect } from "react";
 
 import {
@@ -7,6 +8,8 @@ import {
   captureLead,
   getLeadTrackerParams,
 } from "./utils/tracker";
+=======
+>>>>>>> VOORA-Rakshana
 import useReveal from "./hooks/useReveal";
 
 import Preloader from "./components/Preloader";
@@ -29,6 +32,10 @@ import VooraOneSea from "./pages/VooraOneSea";
 import Upcomingprojects from "./pages/Upcomingproject";
 import Completed from "./pages/Completed";
 import VooraAgastya from "./pages/VooraAgastya";
+<<<<<<< HEAD
+=======
+
+>>>>>>> VOORA-Rakshana
 import ScrollToTop from "./components/ScrollToTop";
 import PageLoader from "./components/PageLoader";
 import VooraWestside from "./pages/VooraWestside";
@@ -36,8 +43,15 @@ import VooraBeckford from "./pages/VooraBeckford";
 import VooraHighwayHaven from "./pages/VooraHighwayHaven";
 import VooraTblock from "./pages/VooraVidyasagarTblock";
 import VooraOceans27 from "./pages/VooraOceans27";
+<<<<<<< HEAD
 import Abouts from "./pages/About-us";
 import CommercialCompleted from "./pages/CommercialCompleted";
+=======
+import CommercialCompleted from "./pages/CommercialCompleted";
+import Portfolio from "./pages/Portfolio";
+import ServicesPage from "./pages/ServicesPage";
+
+>>>>>>> VOORA-Rakshana
 
 function HomePage() {
   return (
@@ -63,6 +77,7 @@ function HomePage() {
 function AppContent() {
   useReveal();
 
+<<<<<<< HEAD
   useEffect(() => {
     initTracker();
 
@@ -156,6 +171,8 @@ function AppContent() {
     return () => document.removeEventListener('submit', handleGlobalSubmit);
   }, []);
 
+=======
+>>>>>>> VOORA-Rakshana
   return (
     <>
       <ScrollToTop />
@@ -174,8 +191,14 @@ function AppContent() {
         <Route path="/voora-vidyasagar-t-block" element={<VooraTblock />} />
         <Route path="/voora-oceans-27" element={<VooraOceans27 />} />
         <Route path="/completed" element={<Completed />} />
+<<<<<<< HEAD
         <Route path="/about-us" element={<Abouts />} />
         <Route path="/commercial-completed" element={<CommercialCompleted />} />
+=======
+        <Route path="/commercial-completed" element={<CommercialCompleted />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/services-page" element={<ServicesPage/>} />
+>>>>>>> VOORA-Rakshana
       </Routes>
       <Footer />
       <ChatWidget />

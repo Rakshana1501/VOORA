@@ -2,6 +2,7 @@ import "./VooraOneSea.css";
 import { motion, AnimatePresence } from "framer-motion";
 import icon from "../assets/image/fav.png";
 import React, { useState, useEffect, useRef } from "react";
+<<<<<<< HEAD
 import hero2 from "../assets/image/hero2.webp";
 import about from "../assets/image/oneseaabout.webp";
 import plan1 from "../assets/image/project1.webp";
@@ -63,10 +64,42 @@ const aminities20 = amenitiesImg[19];
 const aminities21 = amenitiesImg[20];
 const aminities22 = amenitiesImg[21];
 const aminities23 = amenitiesImg[22];
+=======
+import { image } from "framer-motion/client";
+import hero2 from "../assets/image/hero2.webp";
+import about from "../assets/image/oneseaabout.webp"
+import plan1 from "../assets/image/project1.webp"
+import plan2 from "../assets/image/project2.webp"
+import plan3 from "../assets/image/project3.webp"
+import plan4 from "../assets/image/project4.webp"
+import news1 from "../assets/image/news1.webp"
+import news2 from "../assets/image/news2.webp"
+import news3 from "../assets/image/news3.webp"
+import news4 from "../assets/image/news4.webp"
+import news5 from "../assets/image/news5.webp"
+import news6 from "../assets/image/news6.webp"
+import news7 from "../assets/image/news7.webp"
+import news8 from "../assets/image/news8.webp"
+import news9 from "../assets/image/news9.webp"
+import news10 from "../assets/image/news10.webp"
+import news11 from "../assets/image/news11.webp"
+import news12 from "../assets/image/news12.webp"
+import news13 from "../assets/image/news13.webp"
+import news14 from "../assets/image/news14.webp"
+import news15 from "../assets/image/news15.webp"
+import news16 from "../assets/image/news16.webp"
+import news17 from "../assets/image/news17.webp"
+import news18 from "../assets/image/news18.webp"
+import news19 from "../assets/image/news19.webp"
+import news20 from "../assets/image/news20.webp"
+import news21 from "../assets/image/news21.webp"
+import overviewonesea from "../assets/image/overviewonesea.webp"
+>>>>>>> VOORA-Rakshana
 
 
 const videos = [
   {
+<<<<<<< HEAD
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
     title: "Voora One Sea",
   },
@@ -84,6 +117,25 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
+=======
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Voora One Sea",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Commercial Construction",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Interior Design Showcase",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Villa Project Tour",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+>>>>>>> VOORA-Rakshana
     title: "Project Walkthrough",
   },
 ];
@@ -249,6 +301,7 @@ export default function VooraOneSea() {
 
 
 
+<<<<<<< HEAD
 const containerRef = useRef(null);
 const masterContainerRef = useRef(null);
 const scroll = (direction) => {
@@ -257,11 +310,25 @@ const scroll = (direction) => {
 
     containerRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
+=======
+  const containerRef = useRef(null);
+
+const scroll = (direction) => {
+  if (containerRef.current) {
+    const scrollAmount =
+      window.innerWidth < 768 ? 320 : 600;
+
+    containerRef.current.scrollBy({
+      left: direction === "left"
+        ? -scrollAmount
+        : scrollAmount,
+>>>>>>> VOORA-Rakshana
       behavior: "smooth",
     });
   }
 };
 
+<<<<<<< HEAD
 const scrollMasterPlans = (direction) => {
   if (!masterContainerRef.current) return;
 
@@ -272,6 +339,9 @@ const scrollMasterPlans = (direction) => {
     behavior: "smooth",
   });
 };
+=======
+
+>>>>>>> VOORA-Rakshana
 const faqs = [
   {
     question: "Where is the Project located?",
@@ -352,6 +422,7 @@ const faqs = [
   },
 ];
 
+<<<<<<< HEAD
 const galleryData = {
   Interior: [
     InteriorImg1,
@@ -401,6 +472,27 @@ const galleryData = {
   aminities23,
 
   ],
+=======
+
+const galleryData = {
+  Interior: [
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2025/03/ch13-1024x680.webp.bv.webp?bv_host=voora.co.in",
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Voora.00_02_32_30.Still005-1-1024x576.jpg.bv.webp?bv_host=voora.co.in",
+    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  ],
+
+  Exterior: [
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+  ],
+
+  "Site Progress": [
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/2.jpg.bv.webp?bv_host=voora.co.in",
+    "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+    "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+  ],
+>>>>>>> VOORA-Rakshana
 };
 
 
@@ -482,6 +574,10 @@ const newsData = [
     title: "Times of India",
   },
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> VOORA-Rakshana
 const [activeTab, setActiveTab] = useState("Interior");
 const [currentImage, setCurrentImage] = useState(0);
 
@@ -836,8 +932,11 @@ const prevSpecSlide = () => {
                 "🏗️ Spread Across 4 Towers",
                 "🌊 Sea & Backwater Views",
                 "🏡 2 & 3 BHK Luxury Homes",
+<<<<<<< HEAD
                "🛡️ 25+ Safety Features",
 "🌿 85% Open Space"
+=======
+>>>>>>> VOORA-Rakshana
               ].map((item, i) => (
                 <motion.div key={i} variants={fadeUp} className="feature">
                   <p>{item}</p>
@@ -995,7 +1094,11 @@ const prevSpecSlide = () => {
                     <iframe
   src={video.src}
   title={video.title}
+<<<<<<< HEAD
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
+=======
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> VOORA-Rakshana
   allowFullScreen
 />
 
@@ -1029,7 +1132,11 @@ const prevSpecSlide = () => {
 
 
 
+<<<<<<< HEAD
     <section id="plan" className="plans-section">
+=======
+    <section id="plans" className="plans-section">
+>>>>>>> VOORA-Rakshana
 
   {/* HEADER */}
   <div className="plans-header">
@@ -1090,6 +1197,7 @@ const prevSpecSlide = () => {
 
   </div>
 </section>
+<<<<<<< HEAD
 <section id="master-plan" className="master-plans-section">
 
   <div className="plans-header">
@@ -1110,6 +1218,72 @@ const prevSpecSlide = () => {
 </div>
 
 </section>
+=======
+
+
+    <section id="plans" className="plans-section">
+
+  {/* project final */}
+  <div className="plans-header">
+    <h2>Final Project</h2>
+    <p>
+      Explore thoughtfully designed layouts that maximize space,
+      ventilation, and luxury living comfort.
+    </p>
+  </div>
+
+  {/* ARROWS */}
+  <div className="plans-nav">
+    <button
+      className="nav-btn"
+      onClick={() => scroll("left")}
+    >
+      ❮
+    </button>
+
+    <button
+      className="nav-btn"
+      onClick={() => scroll("right")}
+    >
+      ❯
+    </button>
+  </div>
+
+  {/* CAROUSEL */}
+  <div className="plans-container" ref={containerRef}>
+
+    <div className="plan-card">
+      <img
+        src={plan1}
+        alt="2 BHK Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan2}
+        alt="3 BHK Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan3}
+        alt="Penthouse Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan4}
+        alt="Plan 4"
+      />
+    </div>
+
+  </div>
+</section>
+
+>>>>>>> VOORA-Rakshana
 <section className="spec-section">
 
   {/* HEADER */}
@@ -1268,6 +1442,7 @@ const prevSpecSlide = () => {
 
   </div>
 
+<<<<<<< HEAD
 <div className="gallery-thumbnails">
   <div className="gallery-track">
     {images.map((img, index) => (
@@ -1283,6 +1458,27 @@ const prevSpecSlide = () => {
     ))}
   </div>
 </div>
+=======
+  <div className="gallery-thumbnails">
+    {images.map((img, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.1 }}
+      >
+        <img
+          src={img}
+          alt=""
+          className={`thumbnail ${
+            currentImage === index ? "active-thumb" : ""
+          }`}
+          onClick={() => setCurrentImage(index)}
+        />
+      </motion.div>
+    ))}
+  </div>
+>>>>>>> VOORA-Rakshana
 
 </section>
 
@@ -1426,7 +1622,11 @@ const prevSpecSlide = () => {
   <div className="faq-left">
    <iframe
   className="faq-iframe"
+<<<<<<< HEAD
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.985076032592!2d80.23987629999999!3d12.8442403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ca81337ee277561%3A0x4eaa14e25bb3f28f!2sVoora%20-%20One%20Sea!5e0!3m2!1sen!2sin!4v1780396503454!5m2!1sen!2sin"
+=======
+  src="https://www.google.com/maps/embed?pb=..."
+>>>>>>> VOORA-Rakshana
   style={{ border: 0 }}
   allowFullScreen=""
   loading="lazy"
@@ -1436,13 +1636,30 @@ const prevSpecSlide = () => {
   </div>
 
   <div className="faq-right">
+<<<<<<< HEAD
   <img src={locationimg} alt="Location" />
 
    
+=======
+
+    <div className="faq-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div className="faq-container">
+      {faqs.map((faq, index) => (
+        <details className="faq-item" key={index}>
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
+      ))}
+    </div>
+>>>>>>> VOORA-Rakshana
 
   </div>
 
 </section>
+<<<<<<< HEAD
 <section className="faq-wrap">
 
   <div className="faq-head">
@@ -1474,6 +1691,10 @@ const prevSpecSlide = () => {
   </div>
 
 </section>  
+=======
+
+
+>>>>>>> VOORA-Rakshana
 <section className="download-brochure-section">
 
   <div className="download-brochure-overlay"></div>
@@ -1499,6 +1720,7 @@ const prevSpecSlide = () => {
   </div>
 
 </section>
+<<<<<<< HEAD
 
 {/* ─── ENQUIRY LEAD FORM ─────────────────────────────── */}
 <section style={{ padding: '60px 20px', background: '#0e0e0e', textAlign: 'center' }}>
@@ -1514,3 +1736,8 @@ const prevSpecSlide = () => {
     </div>
   );
 }       
+=======
+    </div>
+  );
+}       
+>>>>>>> VOORA-Rakshana

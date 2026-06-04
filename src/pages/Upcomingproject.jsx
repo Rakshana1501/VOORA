@@ -31,6 +31,7 @@ import oceans27 from "../assets/image/herooceans27.webp";
 
 const projectData = [
   {
+<<<<<<< HEAD
     name: "Voora One Sea",
     type: "Residential",
     location: "Next to Mayajaal, ECR",
@@ -97,18 +98,104 @@ const projectData = [
     img: oceans27,
   },
   {
+=======
+      name: "Voora One Sea",
+      type: "Residential",
+      location: "Next to Mayajaal, ECR",
+      Acres: "11.06 Acres",
+      Units: "1039 Units",
+      BHK: "2, 3 BHK",
+      Price: "₹7199/sqft",
+      completion: "Aug 2028",
+      img: oneSea,
+    },
+    {
+      name: "Voora WestSide",
+      type: "Residential",
+      location: "Manapakkam, Chennai",
+      Acres: "1.5 Acres",
+      Units: "77 Units",
+      BHK: "2 & 3 BHK",
+      Price: "₹13000/sqft",
+      completion: "Ready to occupy",
+      img: westSide,
+    },
+    {
+      name: "Voora Agasthya",
+      type: "Residential",
+      location: "Tondiarpet, chennai",
+      Acres: "0.55 Acres",
+      Units: "54 Units",
+      BHK: "3 & 4 BHK",
+      Price: "₹12499/sqft",
+      completion: "Mar 2028",
+      img: agasthya,
+    },
+    {
+      name: "Voora Highway Haven",
+      type: "Residential",
+      location: "Panapakkam, Kanchipuram",
+      Acres: "11.33 Acres",
+      Units: "269 Units",
+      // BHK: "Plot",
+      Price: "₹1500/sqft",
+      completion: "Ready to occupy",
+      img: highwayHaven,
+    },
+    {
+      name: "Voora Beckford",
+      type: "Residential",
+      location: "Nungabakkam, Chennai",
+      Acres: " Acres",
+      Units: "5 Units",
+      BHK: "4BHK",
+      Price: "₹30000/sqft",
+      completion: "",
+      img: beckford,
+    },
+    {
+      name: "Voora Ocean's 27",
+      type: "Residential",
+      location: "Tondiarpet, North Chennai",
+      Acres: "1.8 Acres",
+      Units: "132 Units",
+      BHK: "2, 3 & 4 BHK",
+      Price: "₹",
+      completion: "Ready to occupy",
+      img: oceans27,
+    },
+    {
+>>>>>>> VOORA-Rakshana
       name: "Voora Tech Edge",
       type: "Commercial",
       location: "Next to Mayajaal, ECR",
       Acres: "6.5 Acres",
       Units: "544 Units",
       BHK: "2, 3 & 4 BHK Apartments",
+<<<<<<< HEAD
       Price: "₹7199 Per Sq.ft",
       completion: "Q4 2025",
+=======
+      // Price: "",
+      // completion: "",
+>>>>>>> VOORA-Rakshana
       img: oneSea,
     },
 ];
 
+<<<<<<< HEAD
+=======
+// Mapping of project names to custom description paragraphs for the view modal
+const descriptionMap = {
+  "Voora One Sea": `Voora One Sea is a landmark residential development located next to Mayajaal on the iconic East Coast Road (ECR). Spanning an impressive 11.06 acres, this premium project offers 1,039 thoughtfully designed 2 & 3 BHK apartments that redefine coastal living. Every residence is crafted to maximise natural light, cross-ventilation, and panoramic sea-facing views, ensuring a living experience that feels like a perpetual vacation. With world-class amenities including a grand clubhouse, infinity pool, landscaped gardens, and dedicated children's play areas, Voora One Sea delivers a lifestyle that seamlessly blends luxury with the tranquillity of beachside living. Its strategic location ensures easy access to IT corridors, reputed schools, hospitals, and entertainment hubs along the ECR stretch.`,
+  "Voora WestSide": `Voora WestSide is a boutique residential enclave nestled in the rapidly developing neighbourhood of Manapakkam, Chennai. Spread across 1.5 acres, this exclusive development features just 77 meticulously designed 2 & 3 BHK apartments, ensuring an intimate and close-knit community experience. Each home is thoughtfully planned with spacious interiors, premium finishes, and modern amenities that cater to the discerning homebuyer. Manapakkam's strategic position offers excellent connectivity to major IT parks, the Chennai bypass, and key commercial centres, making Voora WestSide the perfect choice for professionals and families seeking a peaceful yet well-connected address in West Chennai.`,
+  "Voora Agasthya": `Voora Agasthya is a premium residential project located in the vibrant neighbourhood of Tondiarpet, Chennai. Designed across 0.55 acres, this compact yet luxurious development offers 54 spacious 3 & 4 BHK apartments that epitomise modern urban living. Every unit is crafted with attention to detail, featuring contemporary architecture, high-quality finishes, and intelligent space planning that maximises comfort and functionality. Residents enjoy access to a well-equipped fitness centre, landscaped terraces, and community spaces designed to foster a vibrant neighbourhood spirit. Tondiarpet's excellent connectivity to the city's commercial hubs, waterfront promenades, and cultural landmarks makes Voora Agasthya a compelling address for those seeking elevated living in North Chennai.`,
+  "Voora Highway Haven": `Voora Highway Haven is an expansive plotted development situated in Panapakkam, Kanchipuram, spanning a generous 11.33 acres with 269 premium plots designed for those who envision building their dream home from the ground up. Each plot is RERA-approved and Vaastu-compliant, with well-laid-out roads, underground drainage, and 24/7 security infrastructure already in place. Surrounded by lush greenery and positioned along the bustling highway corridor, Voora Highway Haven offers the rare combination of serene countryside charm with seamless city connectivity. Residents benefit from proximity to reputed educational institutions, healthcare facilities, and upcoming commercial zones, making it an ideal investment for families and discerning buyers.`,
+  "Voora Beckford": `Voora Beckford is an ultra-luxury residential project located in the prestigious neighbourhood of Nungambakkam, one of Chennai's most coveted addresses. This exclusive development comprises just 5 bespoke 4 BHK residences, each spanning generous floor plates with premium finishes, imported fixtures, and bespoke interiors that reflect the pinnacle of luxury living. Designed for the elite few, every home at Voora Beckford offers unparalleled privacy, expansive living spaces, and panoramic city views. Nungambakkam's prime location places residents within walking distance of upscale dining, boutique retail, five-star hotels, and key business districts, making Voora Beckford the definitive address for those who demand nothing but the finest.`,
+  "Voora Ocean's 27": `Voora Ocean's 27 is a contemporary residential development located in Tondiarpet, North Chennai, spanning 1.8 acres with 132 thoughtfully designed 2, 3 & 4 BHK apartments. This project brings a fresh wave of modern living to North Chennai with its striking architecture, spacious layouts, and a curated suite of lifestyle amenities including a rooftop infinity pool, state-of-the-art gymnasium, multipurpose hall, and beautifully landscaped gardens. Each residence is designed to capture abundant natural light and ventilation, creating bright, airy living spaces that feel welcoming at every hour. Strategically positioned with excellent road and rail connectivity, Voora Ocean's 27 offers the ideal blend of urban convenience and coastal serenity.`
+};
+
+>>>>>>> VOORA-Rakshana
 const filters = ["All Projects", "Residential"];
 
 const PAGE_TYPE = "Residential";
@@ -180,7 +267,11 @@ export default function Upcomingprojects() {
   className="upcoming-hero"
   style={{
     backgroundImage:
+<<<<<<< HEAD
       "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')",
+=======
+      "url('https://voora.co.in/wp-content/uploads/2025/05/Voora-bannar_16-01-24-02-2.png')",
+>>>>>>> VOORA-Rakshana
   }}
 >
   
@@ -194,7 +285,11 @@ export default function Upcomingprojects() {
               <div className="up-head">
                 <div>
                   <span className="eyebrow">What Build</span>
+<<<<<<< HEAD
                   <h2 className="section-title">Ongoing Projects</h2>
+=======
+                  <h2 className="section-title">Upcoming Projects</h2>
+>>>>>>> VOORA-Rakshana
                 </div>
       
                 <a href="#contact" className="btn btn-outline">
@@ -356,10 +451,14 @@ export default function Upcomingprojects() {
                       <span className="view-tag">Project Overview</span>
                       <h2>{viewProject.name}</h2>
                       <p className="view-desc">
+<<<<<<< HEAD
                         A signature {viewProject.type.toLowerCase()} address by
                         Voora — thoughtfully designed at {viewProject.location}{" "}
                         to deliver elevated living, premium amenities and
                         timeless value.
+=======
+                        {viewProject.name && descriptionMap[viewProject.name] ? descriptionMap[viewProject.name] : `A signature ${viewProject.type.toLowerCase()} address by Voora — thoughtfully designed at ${viewProject.location} to deliver elevated living, premium amenities and timeless value.`}
+>>>>>>> VOORA-Rakshana
                       </p>
 
                       <div className="view-points">
@@ -489,4 +588,8 @@ export default function Upcomingprojects() {
           </section>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> VOORA-Rakshana

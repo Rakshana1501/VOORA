@@ -1750,13 +1750,52 @@
 }
 
 .faq-header {
+<<<<<<< HEAD
   margin-bottom: 30px;
+=======
+  margin-bottom: 35px;
+}
+
+.faq-eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #c9a227;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+>>>>>>> VOORA-Rakshana
 }
 
 .faq-header h2 {
   font-size: 42px;
   font-weight: 700;
+<<<<<<< HEAD
   color: #111;
+=======
+  color: #0d1b4c;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+}
+
+.faq-header h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #d4af37, #f6c343);
+}
+
+.faq-subhead {
+  color: #5b6478;
+  font-size: 15.5px;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 520px;
+>>>>>>> VOORA-Rakshana
 }
 
 /* ==================================
@@ -3240,5 +3279,9 @@
   .download-brochure-field textarea {
     min-height: 100px;
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> VOORA-Rakshana

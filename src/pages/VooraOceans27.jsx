@@ -30,16 +30,20 @@ import news18 from "../assets/image/news18.webp"
 import news19 from "../assets/image/news19.webp"
 import news20 from "../assets/image/news20.webp"
 import news21 from "../assets/image/news21.webp"
+<<<<<<< HEAD
 import InteriorImg1 from "../assets/image/Interior-img1.jpg";
 import InteriorImg2 from "../assets/image/Interior-img2.jpg";
 import InteriorImg3 from "../assets/image/Interior-img3.jpg";
 import ExteriorImg1 from "../assets/image/Exterior-img1.jpg";
 import ExteriorImg2 from "../assets/image/Exterior-img2.jpg";
 import ExteriorImg3 from "../assets/image/Exterior-img3.png";
+=======
+>>>>>>> VOORA-Rakshana
 
 
 const videos = [
   {
+<<<<<<< HEAD
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
     title: "Voora One Sea",
   },
@@ -57,6 +61,25 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
+=======
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Voora One Sea",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Commercial Construction",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Interior Design Showcase",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+    title: "Villa Project Tour",
+  },
+  {
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+>>>>>>> VOORA-Rakshana
     title: "Project Walkthrough",
   },
 ];
@@ -202,6 +225,62 @@ const scroll = (direction) => {
   }
 };  
 
+<<<<<<< HEAD
+=======
+const projectFaqs = [
+  {
+    question: "Where is Voora Ocean's 27 located?",
+    answer:
+      "Voora Ocean's 27 is located in the prime coastal neighbourhood of Tondiarpet, Chennai — offering panoramic Bay of Bengal views with excellent access to the city centre, port and key business districts."
+  },
+  {
+    question: "What residence configurations are available?",
+    answer:
+      "Ocean's 27 features thoughtfully designed sea-facing residences with multiple layouts that blend indoor comfort with sweeping outdoor views — ideal for modern families and lifestyle buyers."
+  },
+  {
+    question: "Is this project RERA approved?",
+    answer:
+      "Yes. Voora Ocean's 27 is fully RERA-registered with all statutory approvals from CMDA, ensuring complete legal clarity and a safe investment."
+  },
+  {
+    question: "What signature amenities does the community offer?",
+    answer:
+      "Residents enjoy a swimming pool, raised timber pool deck with trellis, zen garden, viewing deck, billiards room, yoga studio, gym, multipurpose lawn, kids' play area and a beautifully crafted French-inspired landscape."
+  },
+  {
+    question: "How is connectivity from Tondiarpet?",
+    answer:
+      "Tondiarpet enjoys excellent connectivity via metro, suburban rail, the GNT Road and Inner Ring Road — placing Chennai Central, the Port and the Greater Northern business corridor within easy reach."
+  },
+  {
+    question: "What schools, hospitals and lifestyle hubs are nearby?",
+    answer:
+      "Reputed schools, colleges, multispecialty hospitals, supermarkets, malls and well-known dining destinations are all within a short drive, supporting a balanced everyday lifestyle."
+  },
+  {
+    question: "Are the residences truly sea-facing?",
+    answer:
+      "Yes. The community has been planned to maximise sea-facing units, with carefully oriented towers and large viewing decks designed to capture uninterrupted panoramic views of the Bay of Bengal."
+  },
+  {
+    question: "What about security and safety?",
+    answer:
+      "Ocean's 27 is a fully gated development with 24/7 CCTV surveillance, video door phones, smart access control, trained security personnel and dedicated entry/exit points for residents and visitors."
+  },
+  {
+    question: "Are sustainable and eco-friendly features included?",
+    answer:
+      "Absolutely. The project incorporates solar lighting in common areas, rainwater harvesting, sewage treatment, energy-efficient fixtures, organic waste management and over 100 exotic landscaped plant species."
+  },
+  {
+    question: "How do I schedule a site visit or enquire about pricing?",
+    answer:
+      "You can request a private site visit through the contact form on this page or speak with our sales advisors directly. Our team will share floor plans, pricing, payment plans and walk you through the booking process."
+  },
+];
+
+>>>>>>> VOORA-Rakshana
 const faqData = [
   {
     title: "🏫 Schools",
@@ -238,6 +317,7 @@ const faqData = [
 
 const galleryData = {
   Interior: [
+<<<<<<< HEAD
       InteriorImg1,
       InteriorImg2,
       InteriorImg3, 
@@ -251,6 +331,21 @@ const galleryData = {
 
   "Site Progress": [
     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80",
+=======
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2025/03/ch13-1024x680.webp.bv.webp?bv_host=voora.co.in",
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/Voora.00_02_32_30.Still005-1-1024x576.jpg.bv.webp?bv_host=voora.co.in",
+    "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+  ],
+
+  Exterior: [
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+    "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+  ],
+
+  "Site Progress": [
+    "https://voora.co.in/wp-content/uploads/al_opt_content/IMAGE/voora.co.in/wp-content/uploads/2024/08/2.jpg.bv.webp?bv_host=voora.co.in",
+>>>>>>> VOORA-Rakshana
     "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
     "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
   ],
@@ -703,7 +798,11 @@ const prevSpecSlide = () => {
                     <iframe
   src={video.src}
   title={video.title}
+<<<<<<< HEAD
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
+=======
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> VOORA-Rakshana
   allowFullScreen
 />
 
@@ -831,7 +930,71 @@ const prevSpecSlide = () => {
 </section>
 
 
+<<<<<<< HEAD
    
+=======
+    <section id="plans" className="plans-section">
+
+  {/* project final */}
+  <div className="plans-header">
+    <h2>Final Project</h2>
+    <p>
+      Explore thoughtfully designed layouts that maximize space,
+      ventilation, and luxury living comfort.
+    </p>
+  </div>
+
+  {/* ARROWS */}
+  <div className="plans-nav">
+    <button
+      className="nav-btn"
+      onClick={() => scroll("left")}
+    >
+      ❮
+    </button>
+
+    <button
+      className="nav-btn"
+      onClick={() => scroll("right")}
+    >
+      ❯
+    </button>
+  </div>
+
+  {/* CAROUSEL */}
+  <div className="plans-container" ref={containerRef}>
+
+    <div className="plan-card">
+      <img
+        src={plan1}
+        alt="2 BHK Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan2}
+        alt="3 BHK Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan3}
+        alt="Penthouse Plan"
+      />
+    </div>
+
+    <div className="plan-card">
+      <img
+        src={plan4}
+        alt="Plan 4"
+      />
+    </div>
+
+  </div>
+</section>
+>>>>>>> VOORA-Rakshana
 
 <section className="spec-section">
 
@@ -1076,6 +1239,40 @@ const prevSpecSlide = () => {
 
 
 
+<<<<<<< HEAD
+=======
+<section className="highwayfaq-section">
+  <div className="highwayfaq-container">
+
+    <div className="highwayfaq-header">
+      <span className="highwayfaq-badge">FAQ'S</span>
+      <h2 className="highwayfaq-title">
+        Frequently Asked Questions
+      </h2>
+      <p className="highwayfaq-subtitle">
+        Everything you need to know about Voora Ocean's 27.
+      </p>
+    </div>
+
+    <div className="highwayfaq-list">
+      {projectFaqs.map((faq, index) => (
+        <details key={index} className="highwayfaq-item">
+          <summary className="highwayfaq-question">
+            {faq.question}
+          </summary>
+
+          <div className="highwayfaq-answer">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+
+>>>>>>> VOORA-Rakshana
 <section className="download-brochure-section">
 
   <div className="download-brochure-overlay"></div>
@@ -1101,6 +1298,7 @@ const prevSpecSlide = () => {
   </div>
 
 </section>
+<<<<<<< HEAD
 
 {/* ─── ENQUIRY LEAD FORM ─────────────────────────────── */}
 <section style={{ padding: '60px 20px', background: '#0e0e0e', textAlign: 'center' }}>
@@ -1116,3 +1314,8 @@ const prevSpecSlide = () => {
     </div>
   );
 }       
+=======
+    </div>
+  );
+}
+>>>>>>> VOORA-Rakshana

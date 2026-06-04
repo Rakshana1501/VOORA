@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import "./UpcomingProjects.css";
+<<<<<<< HEAD
 import { captureLead } from "../utils/tracker";
+=======
+>>>>>>> VOORA-Rakshana
 import { Link } from "react-router-dom";
 import {
   FaMapMarkerAlt,
@@ -145,6 +148,7 @@ export default function UpcomingProjects() {
     setSelectedProject(null);
   };
 
+<<<<<<< HEAD
   const handleBrochureSubmit = (e) => {
     e.preventDefault();
     const inputs = e.target.querySelectorAll('input, textarea');
@@ -160,6 +164,8 @@ export default function UpcomingProjects() {
     closeModal();
   };
 
+=======
+>>>>>>> VOORA-Rakshana
   return (
     <section className="section upcoming" id="projects">
       <div className="container">
@@ -167,7 +173,11 @@ export default function UpcomingProjects() {
         <div className="up-head">
           <div>
             <span className="eyebrow">What Build</span>
+<<<<<<< HEAD
             <h2 className="section-title">Ongoing Projects</h2>
+=======
+            <h2 className="section-title">Upcoming Projects</h2>
+>>>>>>> VOORA-Rakshana
           </div>
 
           <a href="#contact" className="btn btn-outline">
@@ -311,7 +321,11 @@ export default function UpcomingProjects() {
                 <p>Fill the details to download the brochure</p>
               </div>
 
+<<<<<<< HEAD
               <form className="brochure-form" onSubmit={handleBrochureSubmit}>
+=======
+              <form className="brochure-form">
+>>>>>>> VOORA-Rakshana
 
                 <div className="input-wrap">
                   <FaUser />

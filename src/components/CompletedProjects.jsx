@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import "./CompletedProjects.css";
+<<<<<<< HEAD
 import { captureLead } from "../utils/tracker";
+=======
+>>>>>>> VOORA-Rakshana
 
 import {
   FaMapMarkerAlt,
@@ -225,6 +228,7 @@ export default function CompletedProjects() {
     setSelectedProject(null);
   };
 
+<<<<<<< HEAD
   const handleBrochureSubmit = (e) => {
     e.preventDefault();
     const inputs = e.target.querySelectorAll('input, textarea');
@@ -240,6 +244,8 @@ export default function CompletedProjects() {
     closeModal();
   };
 
+=======
+>>>>>>> VOORA-Rakshana
   return (
     <section className="section upcoming" id="projects">
       <div className="container">
@@ -391,7 +397,11 @@ export default function CompletedProjects() {
                 <p>Fill the details to download the brochure</p>
               </div>
 
+<<<<<<< HEAD
               <form className="brochure-form" onSubmit={handleBrochureSubmit}>
+=======
+              <form className="brochure-form">
+>>>>>>> VOORA-Rakshana
 
                 <div className="input-wrap">
                   <FaUser />

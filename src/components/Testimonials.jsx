@@ -5,6 +5,7 @@ import ClientStories from './ClientStories'
 
 const videos = [
   {
+<<<<<<< HEAD
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
   },
   {
@@ -18,6 +19,21 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/iO4aofTnM4Q",
+=======
+    src: "https://www.youtube.com/embed/byoTnV_YaTM",
+  },
+  {
+    src: "https://www.youtube.com/embed/fw4zdP5sywM",
+  },
+  {
+    src: "https://www.youtube.com/embed/cpd8ienDJgA",
+  },
+  {
+    src: "https://www.youtube.com/embed/zkVxve-uOeA",
+  },
+  {
+    src: "https://www.youtube.com/embed/iO4aofTnM4Q",
+>>>>>>> VOORA-Rakshana
   },
 ];
 
@@ -77,7 +93,11 @@ export default function Testimonials() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="section testimonials">
+=======
+    <section className="section testimonials" id="insights">
+>>>>>>> VOORA-Rakshana
       <div className="container">
 
         {/* VIDEO SECTION */}
@@ -110,7 +130,11 @@ export default function Testimonials() {
       <iframe
         src={video.src}
         title={video.title}
+<<<<<<< HEAD
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
+=======
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> VOORA-Rakshana
         allowFullScreen
       />
 
@@ -134,12 +158,25 @@ export default function Testimonials() {
 
         </div>
 
+<<<<<<< HEAD
 {/* Reviews Section - KEEP AS IT IS */}
     <div className="ts-head">
              <span className="eyebrow">Client Feedback</span>
        <h2 className="section-title">
          What Our Clients Say
        </h2>
+=======
+{/* Reviews Section */}
+    <div className="ts-head">
+       <span className="ts-eyebrow">TESTIMONIALS</span>
+       <h2 className="ts-title">
+         What Our Clients Say
+       </h2>
+       <p className="ts-subtitle">
+         Real stories from the families and businesses who chose us — sharing their experiences of craftsmanship, trust, and timeless living.
+       </p>
+       <span className="ts-divider"></span>
+>>>>>>> VOORA-Rakshana
      </div>
 
        <div className="ts-viewport" data-reveal>
@@ -150,16 +187,27 @@ export default function Testimonials() {
              {reviews.map((r) => (
                <div className="ts-cell" key={r.name}>
                  <article className="ts-card">
+<<<<<<< HEAD
                    <span className="ts-quote">”</span>
                    <p>{r.text}</p>
                    <div className="ts-stars">★★★★★</div>
                   <div className="ts-person">
                      <span className="ts-avatar">{r.name.charAt(0)}</span>
                      <div>
+=======
+                   <div className="ts-person">
+                     <span className="ts-avatar">{r.name.charAt(0)}</span>
+                     <div className="ts-person-meta">
+>>>>>>> VOORA-Rakshana
                        <strong>{r.name}</strong>
                        <span>{r.role}</span>
                      </div>
                    </div>
+<<<<<<< HEAD
+=======
+                   <div className="ts-stars">★★★★★</div>
+                   <p>{r.text}</p>
+>>>>>>> VOORA-Rakshana
                  </article>
                </div>
              ))}
@@ -183,4 +231,8 @@ export default function Testimonials() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> VOORA-Rakshana

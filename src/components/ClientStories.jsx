@@ -340,9 +340,15 @@ export default function ClientStories() {
 
             <div className="cs-modal-video">
               <iframe
+<<<<<<< HEAD
                 src={`https://www.youtube-nocookie.com/embed/${playing.videoId}?si=99PzBPz2gkWVB3CS&autoplay=1`}
                 title={playing.name}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
+=======
+                src={`https://www.youtube.com/embed/${playing.videoId}?si=99PzBPz2gkWVB3CS&autoplay=1`}
+                title={playing.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+>>>>>>> VOORA-Rakshana
                 allowFullScreen
               />
             </div>

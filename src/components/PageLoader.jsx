@@ -1,5 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import favIcon from "../assets/image/fav.png";
+>>>>>>> VOORA-Rakshana
 import "./PageLoader.css";
 
 export default function PageLoader() {
@@ -48,7 +52,11 @@ export default function PageLoader() {
     <div className="page-loader-overlay" aria-hidden="true">
       <div className="page-loader-content">
         <img
+<<<<<<< HEAD
           src="/favicon.svg"
+=======
+          src={favIcon}
+>>>>>>> VOORA-Rakshana
           alt="Loading..."
           className="page-loader-logo"
         />
