@@ -2,10 +2,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { useEffect } from "react";
 
-import { initTracker, captureLead } from "./utils/tracker";
-
-import { initTracker, captureLead, getLeadTrackerParams } from "./utils/tracker";
-
+import {
+  initTracker,
+  captureLead,
+  getLeadTrackerParams,
+} from "./utils/tracker";
 import useReveal from "./hooks/useReveal";
 
 import Preloader from "./components/Preloader";
