@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { captureLead } from '../utils/tracker';
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 import './Contact.css';
 
 
@@ -75,8 +72,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
     
     const formData = {
       name: e.target.querySelector('#name')?.value || '',
@@ -90,7 +85,6 @@ export default function Contact() {
 
     captureLead('Contact Form (Book Site Visit)', formData);
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     setSent(true);
     e.target.reset();
     setTimeout(() => setSent(false), 3000);
@@ -147,19 +141,6 @@ export default function Contact() {
       </div>
     </div>
 
-<<<<<<< HEAD
-    {/* PLAN */}
-    <div className="form-row">
-      <div className="form-group">
-        <select id="planDuration" defaultValue="" required>
-          <option value="" disabled hidden>Select your preferred duration</option>
-          <option value="immediate">Immediate</option>
-          <option value="1month">1 Month Plan - Quick Start</option>
-          <option value="3months">3 Months Plan - Short Term Growth</option>
-          <option value="6months">6 Months Plan - Structured Learning</option>
-          <option value="9months">9 Months Plan - Deep Mastery</option>
-          <option value="12months">12 Months Plan - Full Journey Program</option>
-=======
     {/* PROJECT INTEREST */}
     <div className="form-row">
       <div className="form-group">
@@ -173,16 +154,11 @@ export default function Contact() {
           <option value="voora-vidyasagar">Voora Vidyasagar T-Block</option>
           <option value="voora-oceans27">Voora Ocean's 27</option>
           <option value="voora-tech-edge">Voora Tech Edge</option>
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
         </select>
         <label></label>
       </div>
     </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     <button type="submit" className="btn-submit">
       {sent ? "✓ Sent Successfully" : "Book Free Consultation"}
     </button>

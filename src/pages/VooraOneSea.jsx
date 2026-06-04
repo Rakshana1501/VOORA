@@ -2,73 +2,6 @@ import "./VooraOneSea.css";
 import { motion, AnimatePresence } from "framer-motion";
 import icon from "../assets/image/fav.png";
 import React, { useState, useEffect, useRef } from "react";
-<<<<<<< HEAD
-import { image } from "framer-motion/client";
-import hero2 from "../assets/image/hero2.webp";
-import about from "../assets/image/oneseaabout.webp"
-import plan1 from "../assets/image/project1.webp"
-import plan2 from "../assets/image/project2.webp"
-import plan3 from "../assets/image/project3.webp"
-import plan4 from "../assets/image/project4.webp"
-import news1 from "../assets/image/news1.webp"
-import news2 from "../assets/image/news2.webp"
-import news3 from "../assets/image/news3.webp"
-import news4 from "../assets/image/news4.webp"
-import news5 from "../assets/image/news5.webp"
-import news6 from "../assets/image/news6.webp"
-import news7 from "../assets/image/news7.webp"
-import news8 from "../assets/image/news8.webp"
-import news9 from "../assets/image/news9.webp"
-import news10 from "../assets/image/news10.webp"
-import news11 from "../assets/image/news11.webp"
-import news12 from "../assets/image/news12.webp"
-import news13 from "../assets/image/news13.webp"
-import news14 from "../assets/image/news14.webp"
-import news15 from "../assets/image/news15.webp"
-import news16 from "../assets/image/news16.webp"
-import news17 from "../assets/image/news17.webp"
-import news18 from "../assets/image/news18.webp"
-import news19 from "../assets/image/news19.webp"
-import news20 from "../assets/image/news20.webp"
-import news21 from "../assets/image/news21.webp"
-import overviewonesea from "../assets/image/overviewonesea.webp"
-import InteriorImg1 from "../assets/image/Interior-img1.jpg";
-import InteriorImg2 from "../assets/image/Interior-img2.jpg";
-import InteriorImg3 from "../assets/image/Interior-img3.jpg";
-import ExteriorImg1 from "../assets/image/Exterior-img-1.jpg";
-import ExteriorImg2 from "../assets/image/Exterior-img-2.jpg";
-import ExteriorImg3 from "../assets/image/Exterior-img-3.jpg";
-import ExteriorImg4 from "../assets/image/Exterior-img-4.jpg";
-import ExteriorImg5 from "../assets/image/Exterior-img-5.jpg";
-import ExteriorImg6 from "../assets/image/Exterior-img-6.jpg";  
-import ExteriorImg7 from "../assets/image/Exterior-img-7.jpg";
-
-import aminities1 from "../assets/image/Aminities-1.jpg"
-import aminities2 from "../assets/image/Aminities-2.jpg"
-import aminities3 from "../assets/image/Aminities-3.jpg"
-import aminities4 from "../assets/image/Aminities-4.jpeg"
-import aminities5 from "../assets/image/Aminities-5.jpeg"
-import aminities6 from "../assets/image/Aminities-6.jpg"
-import aminities7 from "../assets/image/Aminities-7.jpg"
-import aminities8 from "../assets/image/Aminities-8.jpg"
-import aminities9 from "../assets/image/Aminities-9.jpg"
-import aminities10 from "../assets/image/Aminities-10.jpg"
-import aminities11 from "../assets/image/Aminities-11.jpg"
-import aminities12 from "../assets/image/Aminities-12.jpg"
-import aminities13 from "../assets/image/Aminities-13.jpg"
-import aminities14 from "../assets/image/Aminities-14.jpg"
-import aminities15 from "../assets/image/Aminities-15.jpg"
-import aminities16 from "../assets/image/Aminities-16.jpg"
-import aminities17 from "../assets/image/Aminities-17.jpg"
-import aminities18 from "../assets/image/Aminities-18.jpg"
-import aminities19 from "../assets/image/Aminities-19.jpg"
-import aminities20 from "../assets/image/Aminities-20.png"
-import aminities21 from "../assets/image/Aminities-21.jpg"
-import aminities22 from "../assets/image/Aminities-22.jpg"
-import aminities23 from "../assets/image/Aminities-23.png"
-import masterplan from "../assets/image/Master-Layout.jpeg"
-import locationimg from "../assets/image/location-Image.jpeg";
-=======
 import hero2 from "../assets/image/hero2.webp";
 import about from "../assets/image/oneseaabout.webp";
 import plan1 from "../assets/image/project1.webp";
@@ -130,30 +63,10 @@ const aminities20 = amenitiesImg[19];
 const aminities21 = amenitiesImg[20];
 const aminities22 = amenitiesImg[21];
 const aminities23 = amenitiesImg[22];
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
 
 const videos = [
   {
-<<<<<<< HEAD
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Voora One Sea",
-  },
-  {
-    src: "https://www.youtube.com/embed/iO4aofTnM4Q",
-    title: "Commercial Construction",
-  },
-  {
- src: "https://www.youtube.com/embed/Id3OAOGsPIk"
- ,    title: "Interior Design Showcase",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Villa Project Tour",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-=======
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
     title: "Voora One Sea",
   },
@@ -171,7 +84,6 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     title: "Project Walkthrough",
   },
 ];
@@ -570,11 +482,6 @@ const newsData = [
     title: "Times of India",
   },
 ];
-<<<<<<< HEAD
-const [showAllAmenities, setShowAllAmenities] = useState(false);
-=======
-
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 const [activeTab, setActiveTab] = useState("Interior");
 const [currentImage, setCurrentImage] = useState(0);
 
@@ -1088,11 +995,7 @@ const prevSpecSlide = () => {
                     <iframe
   src={video.src}
   title={video.title}
-<<<<<<< HEAD
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-=======
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   allowFullScreen
 />
 
@@ -1200,11 +1103,7 @@ const prevSpecSlide = () => {
 <div className="plans-container">
   <div className="masterplan-card">
     <img
-<<<<<<< HEAD
-      src="/src/assets/image/Master-Layout.jpeg"
-=======
       src={masterplan}
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
       alt="Master Plan"
     />
   </div>
@@ -1600,8 +1499,6 @@ const prevSpecSlide = () => {
   </div>
 
 </section>
-<<<<<<< HEAD
-=======
 
 {/* ─── ENQUIRY LEAD FORM ─────────────────────────────── */}
 <section style={{ padding: '60px 20px', background: '#0e0e0e', textAlign: 'center' }}>
@@ -1614,7 +1511,6 @@ const prevSpecSlide = () => {
   <LeadForm projectName="Voora One Sea" triggerLabel="Book Free Site Visit →" />
 </section>
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     </div>
   );
 }       

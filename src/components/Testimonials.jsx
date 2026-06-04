@@ -5,21 +5,6 @@ import ClientStories from './ClientStories'
 
 const videos = [
   {
-<<<<<<< HEAD
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-  },
-  {
-    src: "https://www.youtube.com/embed/fw4zdP5sywM",
-  },
-  {
-    src: "https://www.youtube.com/embed/cpd8ienDJgA",
-  },
-  {
-    src: "https://www.youtube.com/embed/zkVxve-uOeA",
-  },
-  {
-    src: "https://www.youtube.com/embed/iO4aofTnM4Q",
-=======
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
   },
   {
@@ -33,7 +18,6 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/iO4aofTnM4Q",
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   },
 ];
 
@@ -126,11 +110,7 @@ export default function Testimonials() {
       <iframe
         src={video.src}
         title={video.title}
-<<<<<<< HEAD
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-=======
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
         allowFullScreen
       />
 

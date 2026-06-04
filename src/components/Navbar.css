@@ -50,13 +50,6 @@
 ==================================== */
 
 .logo {
-<<<<<<< HEAD
-  text-decoration: none;
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #fff;
-=======
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -66,7 +59,6 @@
   height: 46px;
   width: auto;
   display: block;
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 }
 
 .logo-he {
@@ -661,8 +653,6 @@
   color: #111827;
 }
 
-<<<<<<< HEAD
-=======
 /* Plain button that looks like a nav link (for hash-scroll items) */
 .nav-plain-btn {
   border: none;
@@ -688,7 +678,6 @@
   }
 }
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
 @media (min-width: 992px) {
 

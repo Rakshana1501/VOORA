@@ -2,42 +2,6 @@ import "./VooraOneSea.css";
 import { motion, AnimatePresence } from "framer-motion";
 import icon from "../assets/image/fav.png";
 import React, { useState, useEffect, useRef } from "react";
-<<<<<<< HEAD
-import { image } from "framer-motion/client";
-import hero3 from "../assets/image/hero3.webp";
-import about from "../assets/image/oneseaabout.webp"
-import plan1 from "../assets/image/project1.webp"
-import plan2 from "../assets/image/project2.webp"
-import plan3 from "../assets/image/project3.webp"
-import plan4 from "../assets/image/project4.webp"
-import news1 from "../assets/image/news1.webp"
-import news2 from "../assets/image/news2.webp"
-import news3 from "../assets/image/news3.webp"
-import news4 from "../assets/image/news4.webp"
-import news5 from "../assets/image/news5.webp"
-import news6 from "../assets/image/news6.webp"
-import news7 from "../assets/image/news7.webp"
-import news8 from "../assets/image/news8.webp"
-import news9 from "../assets/image/news9.webp"
-import news10 from "../assets/image/news10.webp"
-import news11 from "../assets/image/news11.webp"
-import news12 from "../assets/image/news12.webp"
-import news13 from "../assets/image/news13.webp"
-import news14 from "../assets/image/news14.webp"
-import news15 from "../assets/image/news15.webp"
-import news16 from "../assets/image/news16.webp"
-import news17 from "../assets/image/news17.webp"
-import news18 from "../assets/image/news18.webp"
-import news19 from "../assets/image/news19.webp"
-import news20 from "../assets/image/news20.webp"
-import news21 from "../assets/image/news21.webp"
-import InteriorImg1 from "../assets/image/Interior-img1.jpg";
-import InteriorImg2 from "../assets/image/Interior-img2.jpg";
-import InteriorImg3 from "../assets/image/Interior-img3.jpg";
-import ExteriorImg1 from "../assets/image/Exterior-img1.jpg";
-import ExteriorImg2 from "../assets/image/Exterior-img2.jpg";
-import ExteriorImg3 from "../assets/image/Exterior-img3.png";
-=======
 import hero3 from "../assets/image/hero3.webp";
 import about from "../assets/image/oneseaabout.webp";
 import plan1 from "../assets/image/project1.webp";
@@ -71,30 +35,10 @@ import {
   ExteriorImg1, ExteriorImg2, ExteriorImg3,
 } from "../assets/imageUrls";
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
 
 const videos = [
   {
-<<<<<<< HEAD
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Voora One Sea",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Commercial Construction",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Interior Design Showcase",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-    title: "Villa Project Tour",
-  },
-  {
-    src: "https://www.youtube.com/embed/byoTnV_YaTM",
-=======
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
     title: "Voora One Sea",
   },
@@ -112,7 +56,6 @@ const videos = [
   },
   {
     src: "https://www.youtube-nocookie.com/embed/byoTnV_YaTM",
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     title: "Project Walkthrough",
   },
 ];
@@ -955,11 +898,7 @@ const prevSpecSlide = () => {
                     <iframe
   src={video.src}
   title={video.title}
-<<<<<<< HEAD
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-=======
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; compute-pressure"
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   allowFullScreen
 />
 
@@ -1357,8 +1296,6 @@ const prevSpecSlide = () => {
   </div>
 
 </section>
-<<<<<<< HEAD
-=======
 
 {/* ─── ENQUIRY LEAD FORM ─────────────────────────────── */}
 <section style={{ padding: '60px 20px', background: '#0e0e0e', textAlign: 'center' }}>
@@ -1371,7 +1308,6 @@ const prevSpecSlide = () => {
   <LeadForm projectName="Voora Highway Haven" triggerLabel="Book Free Site Visit →" />
 </section>
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
     </div>
   );
 }       

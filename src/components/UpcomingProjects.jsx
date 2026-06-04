@@ -1,9 +1,6 @@
 import { useRef, useState } from "react";
 import "./UpcomingProjects.css";
-<<<<<<< HEAD
-=======
 import { captureLead } from "../utils/tracker";
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 import { Link } from "react-router-dom";
 import {
   FaMapMarkerAlt,
@@ -148,8 +145,6 @@ export default function UpcomingProjects() {
     setSelectedProject(null);
   };
 
-<<<<<<< HEAD
-=======
   const handleBrochureSubmit = (e) => {
     e.preventDefault();
     const inputs = e.target.querySelectorAll('input, textarea');
@@ -165,7 +160,6 @@ export default function UpcomingProjects() {
     closeModal();
   };
 
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   return (
     <section className="section upcoming" id="projects">
       <div className="container">
@@ -317,11 +311,7 @@ export default function UpcomingProjects() {
                 <p>Fill the details to download the brochure</p>
               </div>
 
-<<<<<<< HEAD
-              <form className="brochure-form">
-=======
               <form className="brochure-form" onSubmit={handleBrochureSubmit}>
->>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
                 <div className="input-wrap">
                   <FaUser />
