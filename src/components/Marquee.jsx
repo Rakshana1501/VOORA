@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 
 const items = [
-  { text: "Luxury Villas", icon: <FaKey /> },
+  { text: "Redevelopment", icon: <FaKey /> },
   { text: "Commercial Projects", icon: <FaBuilding /> },
   { text: "Prime Locations", icon: <FaMapMarkedAlt /> },
   { text: "Architecture Excellence", icon: <FaDraftingCompass /> },

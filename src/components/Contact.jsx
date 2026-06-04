@@ -77,7 +77,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="contact">
 
       <div className="container hero-inner">
 

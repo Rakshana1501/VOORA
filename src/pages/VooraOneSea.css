@@ -2846,3 +2846,154 @@
   .vn-side { grid-template-columns: 90px 1fr; padding: 10px; }
   .vn-read-btn { padding: 11px 18px; font-size: 0.78rem; }
 }
+
+/* ===========================
+   HIGHWAY FAQ
+=========================== */
+
+.highwayfaq-section {
+  padding: 90px 20px;
+  background: #faf7ff;
+}
+
+.highwayfaq-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+
+.highwayfaq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.highwayfaq-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ede9fe;
+  color: #7c3aed;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.highwayfaq-title {
+  margin-top: 15px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.highwayfaq-subtitle {
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* FAQ List */
+
+.highwayfaq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.highwayfaq-item {
+  background: #fff;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.highwayfaq-item:hover {
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.12);
+}
+
+.highwayfaq-question {
+  cursor: pointer;
+  padding: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  list-style: none;
+  position: relative;
+}
+
+.highwayfaq-question::-webkit-details-marker {
+  display: none;
+}
+
+.highwayfaq-question::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #8b5cf6;
+  transition: 0.3s;
+}
+
+.highwayfaq-item[open] .highwayfaq-question::after {
+  content: "−";
+}
+
+.highwayfaq-answer {
+  padding: 0 24px 24px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .highwayfaq-title {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .highwayfaq-section {
+    padding: 60px 15px;
+  }
+
+  .highwayfaq-title {
+    font-size: 28px;
+  }
+
+  .highwayfaq-question {
+    font-size: 16px;
+    padding: 18px;
+    padding-right: 50px;
+  }
+
+  .highwayfaq-answer {
+    padding: 0 18px 18px;
+    font-size: 15px;
+  }
+
+  .highwayfaq-question::after {
+    right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highwayfaq-title {
+    font-size: 24px;
+  }
+
+  .highwayfaq-question {
+    font-size: 15px;
+  }
+
+  .highwayfaq-answer {
+    font-size: 14px;
+  }
+}

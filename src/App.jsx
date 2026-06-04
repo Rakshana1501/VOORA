@@ -22,6 +22,7 @@ import VooraOneSea from "./pages/VooraOneSea";
 import Upcomingprojects from "./pages/Upcomingproject";
 import Completed from "./pages/Completed";
 import VooraAgastya from "./pages/VooraAgastya";
+
 import ScrollToTop from "./components/ScrollToTop";
 import PageLoader from "./components/PageLoader";
 import VooraWestside from "./pages/VooraWestside";
@@ -30,6 +31,9 @@ import VooraHighwayHaven from "./pages/VooraHighwayHaven";
 import VooraTblock from "./pages/VooraVidyasagarTblock";
 import VooraOceans27 from "./pages/VooraOceans27";
 import CommercialCompleted from "./pages/CommercialCompleted";
+import Portfolio from "./pages/Portfolio";
+import ServicesPage from "./pages/ServicesPage";
+
 
 function HomePage() {
   return (
@@ -74,6 +78,8 @@ function AppContent() {
         <Route path="/voora-oceans-27" element={<VooraOceans27 />} />
         <Route path="/completed" element={<Completed />} />
         <Route path="/commercial-completed" element={<CommercialCompleted />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/services-page" element={<ServicesPage/>} />
       </Routes>
       <Footer />
       <ChatWidget />

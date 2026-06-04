@@ -1,4 +1,4 @@
-import './Completed.css'
+﻿import './Completed.css'
 import './Upcomingproject.css'
 import {
   FaMapMarkerAlt,
@@ -188,18 +188,15 @@ const projectData = [
   },
 ];
 
+// Mapping of project names to custom description paragraphs for the view modal
+const descriptionMap = {
+  "Voora J K Tower": `Located on Bazullah Road, T. Nagar, Voora J.K. Tower is a commercial complex offering 14,000 sq. ft. of functional business space. Spread over a stilt and four upper floors, this tower is strategically positioned in one of Chennai's most prominent business hubs, ensuring excellent connectivity and convenience. Its central location provides seamless access to public transport, key roads, and nearby amenities such as shopping, dining, and essential services. Designed to meet the demands of modern enterprises, Voora J.K. Tower offers a dependable and efficient workspace in the bustling heart of T. Nagar. As part of Chennai's thriving commercial ecosystem, Voora J.K. Tower remains a trusted address for businesses seeking a central and functional space in a vibrant neighbourhood.`,
+  "Voora Sreela Terrace": `Voora Sreela Terrace, located in the bustling neighbourhood of Gandhi Nagar, Adyar, stands as a premier commercial destination celebrated for its functional design and strategic location. Spanning 30,000 sq. ft. across four levels, it seamlessly integrates vibrant retail spaces and modern office environments to meet diverse business requirements. The ground floor retail spaces boast high visibility and foot traffic, making them ideal for shops, boutiques, and service outlets. Above, the well-designed office spaces offer a professional and efficient setting, tailored to the needs of businesses in the dynamic heart of Adyar. Situated in a prime location, Voora Sreela Terrace ensures unparalleled convenience with easy access to public transport, vibrant shopping destinations, and a variety of dining options, making it the perfect address for enterprises seeking connectivity and growth.`
+};
+
 const filters = ["All Projects", "Commercial"];
 
 const PAGE_TYPE = "Commercial";
-
-const defaultHighlights = [
-  "Prime Commercial Address with High Footfall",
-  "Grade-A Office & Retail Spaces",
-  "Excellent Connectivity & Accessibility",
-  "Modern Architecture & Premium Finishes",
-  "Ample Parking & Power Backup",
-  "24/7 Security & Smart Building Systems",
-];
 
 
 export default function CommercialCompleted() {
@@ -434,10 +431,7 @@ style={{
                      <span className="view-tag">Project Overview</span>
                      <h2>{viewProject.name}</h2>
                      <p className="view-desc">
-                       A premium {viewProject.type.toLowerCase()} landmark by
-                       Voora at {viewProject.location} — designed to host
-                       leading businesses with world-class infrastructure and
-                       lasting value.
+                       {viewProject.name && descriptionMap[viewProject.name] ? descriptionMap[viewProject.name] : `A premium ${viewProject.type.toLowerCase()} landmark by Voora at ${viewProject.location} - designed to host leading businesses with world-class infrastructure and lasting value.`}
                      </p>
 
                      <div className="view-points">
@@ -482,16 +476,7 @@ style={{
                        </div>
                      </div>
 
-                     <div className="view-highlights">
-                       <h4>Key Highlights</h4>
-                       <ul>
-                         {defaultHighlights.map((h) => (
-                           <li key={h}>
-                             <FaCheckCircle /> {h}
-                           </li>
-                         ))}
-                       </ul>
-                     </div>
+                     
 
                      <div className="view-cta-row">
                        <button

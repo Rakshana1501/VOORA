@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 import hero1 from "../assets/image/hero1.webp";
 import hero2 from "../assets/image/hero2.webp";
 import hero3 from "../assets/image/hero3.webp";
@@ -42,11 +43,13 @@ export default function HeroCarousel() {
       {/* Banner Area */}
       <div className="hero-banner">
         <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay, Pagination, Navigation, EffectFade]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
           loop={true}
-          speed={800}
+          speed={1100}
           autoplay={{
-            delay: 5000,
+            delay: 5500,
             disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
@@ -60,6 +63,8 @@ export default function HeroCarousel() {
                   alt={`banner-${index}`}
                   className="slide-image"
                 />
+                <div className="slide-overlay"></div>
+
               </div>
             </SwiperSlide>
           ))}

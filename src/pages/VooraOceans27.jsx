@@ -196,6 +196,59 @@ const scroll = (direction) => {
   }
 };  
 
+const projectFaqs = [
+  {
+    question: "Where is Voora Ocean's 27 located?",
+    answer:
+      "Voora Ocean's 27 is located in the prime coastal neighbourhood of Tondiarpet, Chennai — offering panoramic Bay of Bengal views with excellent access to the city centre, port and key business districts."
+  },
+  {
+    question: "What residence configurations are available?",
+    answer:
+      "Ocean's 27 features thoughtfully designed sea-facing residences with multiple layouts that blend indoor comfort with sweeping outdoor views — ideal for modern families and lifestyle buyers."
+  },
+  {
+    question: "Is this project RERA approved?",
+    answer:
+      "Yes. Voora Ocean's 27 is fully RERA-registered with all statutory approvals from CMDA, ensuring complete legal clarity and a safe investment."
+  },
+  {
+    question: "What signature amenities does the community offer?",
+    answer:
+      "Residents enjoy a swimming pool, raised timber pool deck with trellis, zen garden, viewing deck, billiards room, yoga studio, gym, multipurpose lawn, kids' play area and a beautifully crafted French-inspired landscape."
+  },
+  {
+    question: "How is connectivity from Tondiarpet?",
+    answer:
+      "Tondiarpet enjoys excellent connectivity via metro, suburban rail, the GNT Road and Inner Ring Road — placing Chennai Central, the Port and the Greater Northern business corridor within easy reach."
+  },
+  {
+    question: "What schools, hospitals and lifestyle hubs are nearby?",
+    answer:
+      "Reputed schools, colleges, multispecialty hospitals, supermarkets, malls and well-known dining destinations are all within a short drive, supporting a balanced everyday lifestyle."
+  },
+  {
+    question: "Are the residences truly sea-facing?",
+    answer:
+      "Yes. The community has been planned to maximise sea-facing units, with carefully oriented towers and large viewing decks designed to capture uninterrupted panoramic views of the Bay of Bengal."
+  },
+  {
+    question: "What about security and safety?",
+    answer:
+      "Ocean's 27 is a fully gated development with 24/7 CCTV surveillance, video door phones, smart access control, trained security personnel and dedicated entry/exit points for residents and visitors."
+  },
+  {
+    question: "Are sustainable and eco-friendly features included?",
+    answer:
+      "Absolutely. The project incorporates solar lighting in common areas, rainwater harvesting, sewage treatment, energy-efficient fixtures, organic waste management and over 100 exotic landscaped plant species."
+  },
+  {
+    question: "How do I schedule a site visit or enquire about pricing?",
+    answer:
+      "You can request a private site visit through the contact form on this page or speak with our sales advisors directly. Our team will share floor plans, pricing, payment plans and walk you through the booking process."
+  },
+];
+
 const faqData = [
   {
     title: "🏫 Schools",
@@ -1130,6 +1183,37 @@ const prevSpecSlide = () => {
 
 
 
+<section className="highwayfaq-section">
+  <div className="highwayfaq-container">
+
+    <div className="highwayfaq-header">
+      <span className="highwayfaq-badge">FAQ'S</span>
+      <h2 className="highwayfaq-title">
+        Frequently Asked Questions
+      </h2>
+      <p className="highwayfaq-subtitle">
+        Everything you need to know about Voora Ocean's 27.
+      </p>
+    </div>
+
+    <div className="highwayfaq-list">
+      {projectFaqs.map((faq, index) => (
+        <details key={index} className="highwayfaq-item">
+          <summary className="highwayfaq-question">
+            {faq.question}
+          </summary>
+
+          <div className="highwayfaq-answer">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+
 <section className="download-brochure-section">
 
   <div className="download-brochure-overlay"></div>
@@ -1157,4 +1241,4 @@ const prevSpecSlide = () => {
 </section>
     </div>
   );
-}       
+}

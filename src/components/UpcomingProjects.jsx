@@ -151,7 +151,7 @@ export default function UpcomingProjects() {
         <div className="up-head">
           <div>
             <span className="eyebrow">What Build</span>
-            <h2 className="section-title">Ongoing Projects</h2>
+            <h2 className="section-title">Upcoming Projects</h2>
           </div>
 
           <a href="#contact" className="btn btn-outline">

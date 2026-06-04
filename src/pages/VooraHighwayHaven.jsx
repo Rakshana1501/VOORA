@@ -141,39 +141,28 @@ const lifeAroundItems = [
     points: [
       "Annai Sri Sarada Devi School – 3.2 km",
       "Sri Saraswathi Matric School – 5 km",
-      "Oxford Public School – 7 km",
-      "Velammal School – 8 km",
-      "Government Higher Secondary School – 9 km",
     ],
   },
   {
     title: "🎓 Colleges",
     points: [
-      "Arignar Anna College – 12 km",
-      "Sri Ram Engineering College – 15 km",
-      "Saveetha University – 18 km",
-      "VIT Campus – 22 km",
-      "Government Arts College – 20 km",
+      "Sri Ramachandra Polytechnic College Is Located 5.3km.",
+      "Jamia Madeenathul Ilm Arabic College Is Located 1.5km.",
+      "Shri Sapthagiri Institute Of Technology Is Located 5.1km.",
     ],
   },
   {
     title: "🏥 Hospitals",
     points: [
-      "Government Hospital – 10 km",
-      "Apollo Clinic – 8 km",
-      "Be Well Hospital – 9 km",
-      "Kanchi Hospital – 14 km",
-      "Multi Speciality Medical Centre – 11 km",
+      "Panapakkam Govt Hospital Is Located At 4km.",
     ],
   },
   {
     title: "🏭 Industrial Hubs",
     points: [
-      "Panapakkam SIPCOT – 10 km",
-      "TATA EV Plant – 12 km",
-      "Hong Fu Group Footwear Plant – 14 km",
-      "Upcoming Greenfield Airport Zone – 18 km",
-      "Automobile Manufacturing Corridor – 16 km",
+      "10 minutes from Panapakkam SIPCOT.",
+      "Tata Motors EV Plant: ₹9,000 Cr investment, 5,000 employees.",
+      "Hong Fu Group: ₹1,500 Cr investment, creating 25,000 jobs.",
     ],
   },
 ];
@@ -841,8 +830,7 @@ export default function VooraHighwayHaven() {
         </div>
       </section>
 
-      <section id="faqs" className="faq-section">
-
+      <section id="location" className="faq-section">
 
         <div className="faq-left">
           <iframe
@@ -852,11 +840,19 @@ export default function VooraHighwayHaven() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Voora One Sea Location"
+            title="Voora Highway Haven Location"
           />
         </div>
 
         <div className="faq-right">
+
+          <div className="faq-header">
+            <span className="faq-eyebrow">EXPLORE THE NEIGHBOURHOOD</span>
+            <h2>Life Around Highway Haven</h2>
+            <p className="faq-subhead">
+              A quick look at the schools, colleges, hospitals and industrial corridors that surround the community.
+            </p>
+          </div>
 
           <div className="faq-container">
             {faqs.map((faq, index) => (
@@ -1006,42 +1002,6 @@ export default function VooraHighwayHaven() {
       </section>
 
 
-      <section id="faqs" className="faq-section">
-
-
-
-        <div className="faq-left">
-          <iframe
-            className="faq-iframe"
-            src="https://www.google.com/maps/embed?pb=..."
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Voora One Sea Location"
-          />
-        </div>
-
-        <div className="faq-right">
-
-          <div className="faq-header">
-            <h2>Frequently Asked Questions</h2>
-          </div>
-
-          <div className="faq-container">
-            {faqs.map((faq, index) => (
-              <details className="faq-item" key={index}>
-                <summary>{faq.question}</summary>
-                <p>{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-
-        </div>
-
-      </section>
-
-
       <section className="download-brochure-section">
 
         <div className="download-brochure-overlay"></div>
@@ -1108,7 +1068,7 @@ export default function VooraHighwayHaven() {
 
 
 
-      <section className="highwayfaq-section">
+      <section id="faqs" className="highwayfaq-section">
         <div className="highwayfaq-container">
 
           <div className="highwayfaq-header">
@@ -1141,4 +1101,4 @@ export default function VooraHighwayHaven() {
 
     </div>
   );
-}       
+}

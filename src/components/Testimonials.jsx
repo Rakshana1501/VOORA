@@ -77,7 +77,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="section testimonials">
+    <section className="section testimonials" id="insights">
       <div className="container">
 
         {/* VIDEO SECTION */}
@@ -134,12 +134,16 @@ export default function Testimonials() {
 
         </div>
 
-{/* Reviews Section - KEEP AS IT IS */}
+{/* Reviews Section */}
     <div className="ts-head">
-             <span className="eyebrow">Client Feedback</span>
-       <h2 className="section-title">
+       <span className="ts-eyebrow">TESTIMONIALS</span>
+       <h2 className="ts-title">
          What Our Clients Say
        </h2>
+       <p className="ts-subtitle">
+         Real stories from the families and businesses who chose us — sharing their experiences of craftsmanship, trust, and timeless living.
+       </p>
+       <span className="ts-divider"></span>
      </div>
 
        <div className="ts-viewport" data-reveal>
@@ -150,16 +154,15 @@ export default function Testimonials() {
              {reviews.map((r) => (
                <div className="ts-cell" key={r.name}>
                  <article className="ts-card">
-                   <span className="ts-quote">”</span>
-                   <p>{r.text}</p>
-                   <div className="ts-stars">★★★★★</div>
-                  <div className="ts-person">
+                   <div className="ts-person">
                      <span className="ts-avatar">{r.name.charAt(0)}</span>
-                     <div>
+                     <div className="ts-person-meta">
                        <strong>{r.name}</strong>
                        <span>{r.role}</span>
                      </div>
                    </div>
+                   <div className="ts-stars">★★★★★</div>
+                   <p>{r.text}</p>
                  </article>
                </div>
              ))}
