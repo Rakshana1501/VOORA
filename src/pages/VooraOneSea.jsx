@@ -486,7 +486,7 @@ const newsData = [
     title: "Times of India",
   },
 ];
-
+const [showAllAmenities, setShowAllAmenities] = useState(false);
 const [activeTab, setActiveTab] = useState("Interior");
 const [currentImage, setCurrentImage] = useState(0);
 

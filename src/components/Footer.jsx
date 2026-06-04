@@ -7,7 +7,7 @@ import {
   FaXTwitter,
   FaFacebookF,
 } from 'react-icons/fa6'
-
+import footerlogo from "../assets/image/logo.png.bv.webp"
 export default function Footer() {
   return (
     <footer className="footer">
@@ -71,8 +71,9 @@ export default function Footer() {
         <div className="footer-center">
 
           <div className="footer-logo-box">
-            <img
-            src="https://placehold.co/200x80/1a1a1a/ffffff?text=VOORA+LOGO"              alt="Voora Logo"
+          <img
+              src={footerlogo}
+              alt="Voora Logo"
               className="footer-logo"
             />
 

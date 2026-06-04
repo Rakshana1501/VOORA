@@ -169,6 +169,9 @@ const [commercialSubOpen, setCommercialSubOpen] = useState(false);
           <li>
             <a href="#insights">Insights</a>
           </li>
+ <li>
+            <a href="#insights">Testimonials</a>
+          </li>
 
           <li className="nav-cta-mobile">
             <a href="#contact">Get Consultation</a>
