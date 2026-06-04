@@ -2,8 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 <<<<<<< HEAD
 =======
 import { useEffect } from "react";
+<<<<<<< HEAD
 import { initTracker, captureLead } from "./utils/tracker";
 >>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
+=======
+import { initTracker, captureLead, getLeadTrackerParams } from "./utils/tracker";
+>>>>>>> 5acf6610ce2c1df0d0fb71f7ba0b135cba2f6092
 
 import useReveal from "./hooks/useReveal";
 
@@ -123,8 +127,17 @@ function AppContent() {
         else if (path.includes('tech-edge')) deducedProject = 'Voora Tech Edge';
         else if (modalHeader) deducedProject = modalHeader;
 
+        // Fallback to mapped campaign project if available
+        if (!deducedProject) {
+          const trackerParams = getLeadTrackerParams();
+          if (trackerParams.mappedProject) {
+            deducedProject = trackerParams.mappedProject;
+          }
+        }
+
         formData.project = deducedProject;
       }
+
 
       if (formData.projectInterest && !formData.project) {
         formData.project = formData.projectInterest;
