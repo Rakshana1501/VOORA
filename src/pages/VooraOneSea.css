@@ -2306,8 +2306,12 @@
 }
 
 .amenities-section{
+<<<<<<< HEAD
   padding:80px 5% !important;
       max-width: 1400px !important;
+=======
+  padding:80px 5%;
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   background:#f5f5f5;
 }
 
@@ -2361,6 +2365,7 @@
 
 .amenities-grid{
   display:grid;
+<<<<<<< HEAD
   grid-template-columns:repeat(4,1fr) !important;
   gap:22px;
 }
@@ -2384,6 +2389,12 @@
 .read-more-btn:hover {
   background: #0b5ed7;
 }
+=======
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 /* SMALL BOXES */
 
 .amenity-card{
@@ -2422,7 +2433,11 @@
 @media(max-width:992px){
 
   .amenities-grid{
+<<<<<<< HEAD
     grid-template-columns:repeat(1,1fr);
+=======
+    grid-template-columns:repeat(2,1fr);
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   }
 
   .amenities-wrapper{

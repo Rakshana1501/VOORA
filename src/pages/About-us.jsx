@@ -1,5 +1,6 @@
 import React from 'react';
 import './About-us.css';
+<<<<<<< HEAD
 import '../components/About.css'
 import hero2 from '../assets/image/about_us.webp';
 
@@ -225,3 +226,25 @@ export default function AboutUsPage() {
   );
 
 }
+=======
+import About from '../components/About';
+
+export default function AboutUsPage() {
+    return (
+        <div className="one-sea-page">
+            <section className="about-hero">
+                {/* Add Hero Image Here */}
+            </section>
+            
+            <section className="overview-section">
+                <div className="overview-container">
+                    <div className="overview-content">
+                        <h2>About <span>Voora</span></h2>
+                        <About />
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1

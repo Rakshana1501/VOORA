@@ -1,4 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import { useEffect } from "react";
+import { initTracker, captureLead } from "./utils/tracker";
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
 import useReveal from "./hooks/useReveal";
 
@@ -56,6 +61,93 @@ function HomePage() {
 function AppContent() {
   useReveal();
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    initTracker();
+
+    const handleGlobalSubmit = (e) => {
+      // If React onSubmit handler called preventDefault, skip to avoid double logging
+      if (e.defaultPrevented) return;
+
+      const form = e.target;
+      if (!form) return;
+
+      // Identify form type
+      let formClass = form.className || '';
+      let formName = 'Web Lead Form';
+      if (formClass.includes('download-brochure')) {
+        formName = 'Project Page Brochure Form';
+      } else if (formClass.includes('brochure-form')) {
+        formName = 'Grid Card Brochure Form';
+      } else if (form.id) {
+        formName = form.id;
+      }
+
+      // Extract form fields
+      const formData = {};
+      const elements = form.elements;
+      for (let i = 0; i < elements.length; i++) {
+        const el = elements[i];
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') {
+          let key = el.name || el.id || '';
+          if (!key && el.placeholder) {
+            key = el.placeholder.toLowerCase().replace(/[^a-z0-9]/g, '_');
+          }
+          if (!key) continue;
+
+          if (el.type === 'checkbox' || el.type === 'radio') {
+            if (el.checked) formData[key] = el.value;
+          } else {
+            formData[key] = el.value;
+          }
+        }
+      }
+
+      // Deduce project name
+      if (!formData.project && !formData.projectInterest) {
+        const modalHeader = form.closest('.brochure-modal')?.querySelector('h3')?.textContent ||
+                            form.closest('.download-brochure-box')?.querySelector('h2')?.textContent ||
+                            form.closest('section')?.querySelector('h2')?.textContent ||
+                            '';
+        
+        const path = window.location.pathname.toLowerCase();
+        let deducedProject = '';
+        if (path.includes('one-sea')) deducedProject = 'Voora One Sea';
+        else if (path.includes('agastya')) deducedProject = 'Voora Agastya Heights';
+        else if (path.includes('westside')) deducedProject = 'Voora Westside';
+        else if (path.includes('beckford')) deducedProject = 'Voora Beckford';
+        else if (path.includes('highway-haven')) deducedProject = 'Voora Highway Haven';
+        else if (path.includes('t-block') || path.includes('vidyasagar')) deducedProject = 'Voora Vidyasagar T-Block';
+        else if (path.includes('oceans')) deducedProject = 'Voora Ocean\'s 27';
+        else if (path.includes('tech-edge')) deducedProject = 'Voora Tech Edge';
+        else if (modalHeader) deducedProject = modalHeader;
+
+        formData.project = deducedProject;
+      }
+
+      if (formData.projectInterest && !formData.project) {
+        formData.project = formData.projectInterest;
+      }
+
+      // Capture and save lead
+      captureLead(formName, formData);
+
+      e.preventDefault();
+      const pName = formData.project || 'Project';
+      alert(`Thank you! Your brochure download request for ${pName} has been received.`);
+      form.reset();
+
+      // Close open modals
+      const closeBtn = form.closest('.brochure-overlay')?.querySelector('.close-modal');
+      if (closeBtn) closeBtn.click();
+    };
+
+    document.addEventListener('submit', handleGlobalSubmit);
+    return () => document.removeEventListener('submit', handleGlobalSubmit);
+  }, []);
+
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   return (
     <>
       <ScrollToTop />

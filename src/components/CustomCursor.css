@@ -158,7 +158,11 @@ body.cc-news .cc-dot {
   width: 40px;
   height: 40px;
   border-radius: 0;
+<<<<<<< HEAD
   background: url('../assets/image/fav.png') center / contain no-repeat;
+=======
+  background: url('/favicon.svg') center / contain no-repeat;
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
   box-shadow: none;
   mix-blend-mode: normal;
   transition: width 0.2s ease, height 0.2s ease, transform 0.15s ease;

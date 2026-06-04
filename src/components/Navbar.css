@@ -50,11 +50,23 @@
 ==================================== */
 
 .logo {
+<<<<<<< HEAD
   text-decoration: none;
   font-size: 1.7rem;
   font-weight: 800;
   letter-spacing: 2px;
   color: #fff;
+=======
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 }
 
 .logo-he {
@@ -649,6 +661,34 @@
   color: #111827;
 }
 
+<<<<<<< HEAD
+=======
+/* Plain button that looks like a nav link (for hash-scroll items) */
+.nav-plain-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  font-family: inherit;
+  transition: color 0.3s;
+}
+.nav-plain-btn:hover { color: #7c3aed; }
+
+/* Mobile: make plain btn full-width like links */
+@media (max-width: 991px) {
+  .nav-plain-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 14px 0;
+    color: #111827;
+  }
+}
+
+>>>>>>> c91bb80f55339f6a8a3a2f9f53787a27d40826c1
 
 @media (min-width: 992px) {
 
